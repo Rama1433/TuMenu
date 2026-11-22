@@ -1,15 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 235" role="img" aria-labelledby="title desc">
-<title id="title">Tu Menú</title><desc id="desc">Logo principal de la plataforma de menús digitales Tu Menú.</desc>
-<g transform="translate(12 12) scale(.83)">
-<rect x="8" y="8" width="240" height="240" rx="57" fill="#173E4B"/>
-<rect x="39" y="43" width="167" height="177" rx="23" fill="#98D5D0" opacity=".24"/>
-<path d="M68 37h99l41 42v116a19 19 0 0 1-19 19H68a19 19 0 0 1-19-19V56a19 19 0 0 1 19-19Z" fill="#FCFBF6"/>
-<path d="M167 37v28a14 14 0 0 0 14 14h27Z" fill="#97D8CF"/>
-<circle cx="82" cy="111" r="9" fill="#24A69A"/><path d="M107 111h57" stroke="#173E4B" stroke-width="10" stroke-linecap="round"/>
-<circle cx="82" cy="149" r="9" fill="#24A69A"/><path d="M107 149h57" stroke="#173E4B" stroke-width="10" stroke-linecap="round"/>
-<path d="M74 184h87" stroke="#BBCBD0" stroke-width="9" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" role="img" aria-labelledby="title desc"><title id="title">Tu Menú — Cartas digitales</title><desc id="desc">Logo de Tu Menú, con carta digital, campana de servicio y cursor</desc>
+<g transform="translate(8 7) scale(.89)">
+<path d="M43 78Q40 53 65 49L96 41L93 217L61 194Q45 183 43 160Z" fill="#20CDA0"/>
+<path d="M106 48 197 34Q222 32 225 61L218 192Q217 214 195 217L105 228Q79 229 77 203V79Q77 51 106 48Z" fill="#FFFDF6" stroke="#005253" stroke-width="11"/>
+<g fill="#006363"><path d="M127 122C128 98 145 83 166 83S205 100 207 122Z"/><rect x="124" y="122" width="88" height="7" rx="4"/><circle cx="166" cy="82" r="6"/><rect x="162" y="73" width="8" height="11" rx="4"/></g>
+<g stroke="#03CB8A" stroke-width="6" stroke-linecap="round"><path d="M206 84v-9M218 91l7-7M223 104h8"/></g>
+<g fill="#006363"><circle cx="109" cy="154" r="5"/><circle cx="109" cy="177" r="5"/><circle cx="109" cy="199" r="5"/></g>
+<g stroke="#6DD6BE" stroke-width="8" stroke-linecap="round"><path d="M126 154h55M126 177h50M126 199h46"/></g>
+<path d="M191 165 227 189 208 194 218 219 207 223 195 199 183 213Z" fill="#03CB8A" stroke="#FFFDF6" stroke-width="5" stroke-linejoin="round"/>
 </g>
-<text x="248" y="126" fill="#173E4B" font-family="Arial,Helvetica,sans-serif" font-size="91" font-weight="700" letter-spacing="-4">Tu</text>
-<text x="372" y="126" fill="#168D89" font-family="Arial,Helvetica,sans-serif" font-size="91" font-weight="700" letter-spacing="-4">Menú</text>
-<text x="253" y="175" fill="#657E84" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="600" letter-spacing="4">CARTAS DIGITALES</text>
+<text x="255" y="139" fill="#005253" font-family="Arial, Helvetica, sans-serif" font-size="117" font-weight="750" letter-spacing="-7">Tu Menú</text>
+<path d="M265 193h50M849 193h50" stroke="#49CDB1" stroke-width="6" stroke-linecap="round"/>
+<text x="335" y="202" fill="#237B7D" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="400" letter-spacing="7">cartas digitales</text>
 </svg>

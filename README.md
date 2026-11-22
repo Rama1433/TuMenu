@@ -1,30 +1,9 @@
-# Tu Menú — identidad de marca
+# Tu Menú — demo V6 con identidad dinámica
 
-**Tu Menú** es una plataforma de cartas digitales interactivas para restaurantes, cafeterías y bares.
+Esta es una demo autónoma con el catálogo de **Monti** como ejemplo. El logo inicial de la plataforma es **Tu Menú**, con favicon propio.
 
-## Logo
+Desde **Vista negocio → Personalización** se puede cargar el logo de un local (PNG, JPG o WebP). Al aplicar el diseño se actualizan el logo del encabezado, el logo de bienvenida, el título de la pestaña y el favicon, además de la paleta y plantilla elegidas. Si se quita el logo del negocio vuelve la marca Tu Menú.
 
-- `branding/logo-horizontal.svg`: logotipo con nombre y descriptor.
-- `branding/logo-icono.svg`: isotipo cuadrado, para QR, avatar e ícono.
-- `branding/favicon.svg`: ícono para la pestaña del navegador.
+Se mantiene la funcionalidad de menú, carrito, habilitación de mesas y seguimiento de la demo anterior. **Esta demo no tiene autenticación segura ni sincronización real entre equipos distintos.** Se requerirá una base de datos y almacenamiento de imágenes para el uso comercial multi-local.
 
-### Paleta de la plataforma
-| Color | Hex |
-| --- | --- |
-| Azul petróleo | `#173E4B` |
-| Verde agua | `#168D89` |
-| Menta | `#97D8CF` |
-| Blanco cálido | `#FCFBF6` |
-
-La identidad de **Tu Menú** corresponde a la plataforma. Cada local conserva su propio logo, su paleta y su carta.
-
-## Integración recomendada
-
-En el `<head>` del sitio se puede declarar:
-```html
-<link rel="icon" type="image/svg+xml" href="/branding/favicon.svg">
-```
-
-Para el panel administrativo, usar el isotipo de Tu Menú. Para las cartas de los clientes, mantener la identidad del restaurante.
-
-> Nota (noviembre de 2026): al revisar este repositorio, GitHub indicaba que aún no contenía la aplicación Monti V6. Este commit incorpora la identidad visual, no el código de la demo ni la sincronización real de pedidos.
+Los SVG se guardan en la carpeta branding. La carta de muestra no debe interpretarse como una carta oficial del restaurante.
