@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 235" role="img" aria-labelledby="title desc">
+<title id="title">Tu Menú</title><desc id="desc">Logo principal de la plataforma de menús digitales Tu Menú.</desc>
+<g transform="translate(12 12) scale(.83)">
+<rect x="8" y="8" width="240" height="240" rx="57" fill="#173E4B"/>
+<rect x="39" y="43" width="167" height="177" rx="23" fill="#98D5D0" opacity=".24"/>
+<path d="M68 37h99l41 42v116a19 19 0 0 1-19 19H68a19 19 0 0 1-19-19V56a19 19 0 0 1 19-19Z" fill="#FCFBF6"/>
+<path d="M167 37v28a14 14 0 0 0 14 14h27Z" fill="#97D8CF"/>
+<circle cx="82" cy="111" r="9" fill="#24A69A"/><path d="M107 111h57" stroke="#173E4B" stroke-width="10" stroke-linecap="round"/>
+<circle cx="82" cy="149" r="9" fill="#24A69A"/><path d="M107 149h57" stroke="#173E4B" stroke-width="10" stroke-linecap="round"/>
+<path d="M74 184h87" stroke="#BBCBD0" stroke-width="9" stroke-linecap="round"/>
+</g>
+<text x="248" y="126" fill="#173E4B" font-family="Arial,Helvetica,sans-serif" font-size="91" font-weight="700" letter-spacing="-4">Tu</text>
+<text x="372" y="126" fill="#168D89" font-family="Arial,Helvetica,sans-serif" font-size="91" font-weight="700" letter-spacing="-4">Menú</text>
+<text x="253" y="175" fill="#657E84" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="600" letter-spacing="4">CARTAS DIGITALES</text>
+</svg>
