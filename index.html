@@ -370,290 +370,102 @@ html[data-theme="ocean"] .hero{background:#d5e8ea}html[data-theme="ocean"] .topl
 .admin-photo-actions .admin-photo-clear{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:9px 11px;font-size:11px;font-weight:750;color:var(--muted)}
 .admin-photo-actions .photo-present{font-size:10px;font-weight:700;color:var(--green)}
 @media(max-width:680px){.admin-photo-actions{width:100%}.admin-photo-upload,.admin-photo-actions .admin-photo-clear{min-height:40px}}
+
+/* Tu Menú V9: evita el zoom automático de iOS al enfocar campos (sin bloquear zoom manual) */
+.hero h1{white-space:pre-line;overflow-wrap:anywhere}
+.brand-preview-banner b{white-space:pre-line;overflow-wrap:anywhere}
+@media screen and (max-width: 900px){
+ input:not([type="checkbox"]):not([type="radio"]),textarea,select,[contenteditable="true"]{
+  font-size:16px!important;line-height:1.4;min-width:0;max-width:100%;
+ }
+ input[type="search"],input[type="url"],input[type="text"],input[type="number"],input[type="email"],textarea,select{touch-action:manipulation}
+ .identity-copy textarea{width:100%;resize:vertical;min-height:64px}
+}
 </style>
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M4 8h16l-1 13H5L4 8ZM9 9V6a3 3 0 0 1 6 0v3"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></symbol><symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 2h14v20l-3-2-4 2-4-2-3 2zM8 7h8M8 11h8M8 15h5"/></symbol><symbol id="i-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M2 3v17M22 3v17"/></symbol><symbol id="i-coffee" viewBox="0 0 24 24"><path d="M4 7h13v7a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6zM17 9h3a2 2 0 0 1 0 5h-3M8 2v3M12 2v3"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M20 5c-2-2-5-2-7 0l-1 1-1-1c-2-2-5-2-7 0s-2 5 0 7l8 8 8-8c2-2 2-5 0-7z"/></symbol><symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></symbol><symbol id="i-social" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m9 11 6-4M9 13l6 4"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v6M14 11v6"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.2 6.5L22 9.5l-5 4.9 1.2 7L12 18l-6.2 3.4 1.2-7-5-4.9 6.8-1z"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h13v12H2zM15 10h4l3 4v4h-7M6 18a2 2 0 1 0 4 0M17 18a2 2 0 1 0 4 0"/></symbol><symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><path d="M7 12V5h10v7M12 2l5 4-5 4M5 14v6h14v-6"/></symbol><symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 16v4h16v-4"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="11" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol><symbol id="i-unlock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="11" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10H12V2Zm3 0a9 9 0 0 1 7 7h-7V2Z"/></symbol></svg>
 <div id="monti-splash" class="monti-splash" aria-hidden="true"><div class="splash-card"><img id="splash-logo" src="branding/logo-horizontal.svg" alt=""><strong id="splash-name" hidden></strong><span>Una carta para disfrutar</span><div class="splash-line"></div></div></div><div class="topline"></div>
-<header class="mast"><div class="mast-in"><div class="brand"><img id="logo" src="branding/logo-horizontal.svg" alt="Tu Menú — Cartas digitales"><div class="brand-text"><b id="brand-name">Monti</b><small id="brand-subtitle">Bar de pastas y café</small></div></div><div class="mast-controls"><div class="badge-lite" id="table-badge">Mesa 3</div><button class="ghost-btn" id="admin-toggle" aria-label="Cambiar entre menú y panel del local"><svg><use href="#i-grid"/></svg><span>Vista negocio</span></button><button class="icon-btn" id="header-cart" aria-label="Ver carrito"><svg><use href="#i-bag"/></svg><span class="cart-n" id="cart-count" hidden>0</span></button></div></div><div class="demo-ribbon"><strong>DEMO INTERACTIVA</strong> · Los pedidos y los pagos son de prueba, no se envían al restaurante.</div></header>
+<header class="mast"><div class="mast-in"><div class="brand"><img id="logo" src="branding/logo-horizontal.svg" alt="Tu Menú — Cartas digitales"><div class="brand-text"><b id="brand-name">Monti</b><small id="brand-subtitle">Bar de pastas y café</small></div></div><div class="mast-controls"><div class="badge-lite" id="table-badge">Mesa 3</div><button class="ghost-btn" id="admin-toggle" aria-label="Cambiar entre menú y panel del local"><svg><use href="#i-grid"/></svg><span>Vista negocio</span></button><button class="icon-btn" id="header-cart" aria-label="Ver carrito"><svg><use href="#i-bag"/></svg><span class="cart-n" id="cart-count" hidden>0</span></button></div></div><div class="demo-ribbon"><strong>DEMO INTERACTIVA</strong> · Productos y precios ficticios. No se envían pedidos ni se procesan pagos reales.</div></header>
 <div id="order-float" hidden aria-live="polite"></div>
-<main id="customer-view"><div class="wrap"><div id="table-access-banner" class="table-access-banner locked" role="status" aria-live="polite"></div><section id="customer-tracker" class="customer-tracker" hidden></section><section class="hero"><div class="hero-copy"><span class="eyebrow" id="hero-eyebrow">Hecho con amor · Pasta fresca</span><h1 id="hero-heading">La buena pasta<br>se disfruta.</h1><p id="hero-intro">Elegí lo que más te gusta, personalizá tu plato y hacé tu pedido sin esperar.</p><button type="button" id="how-it-works" class="monti-help"><svg><use href="#i-share"/></svg> ¿Cómo funciona?</button></div><div class="hero-photos" aria-label="Ilustraciones originales de Tu Menú"><span class="hero-spark s1">✦</span><div class="hero-photo hero-art one" aria-hidden="true"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M15 60c5-29 19-38 35-38s31 9 35 38M10 65h80M50 11v12"/><path d="M24 51q8-9 17-1 7-13 17-1 10-10 19 1"/><circle cx="50" cy="11" r="3"/></svg></div><div class="hero-photo hero-art two" aria-hidden="true"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M22 38h52v32Q72 83 48 83T22 70Z"/><path d="M74 45q18-5 16 12-1 11-16 12M17 87h63M35 14q-7 8 0 17M53 12q-7 9 0 19"/></svg></div><div class="hero-photo hero-art three" aria-hidden="true"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M19 69 49 28 80 69Z"/><path d="M19 69h61v13H19Z"/><path d="M30 58h41M38 46h22"/><circle cx="49" cy="23" r="5"/></svg></div><span class="hero-spark s2">✦</span></div></section>
+<main id="customer-view"><div class="wrap"><div id="table-access-banner" class="table-access-banner locked" role="status" aria-live="polite"></div><section id="customer-tracker" class="customer-tracker" hidden></section><section class="hero"><div class="hero-copy"><span class="eyebrow" id="hero-eyebrow">DESCUBRÍ · ELEGÍ · DISFRUTÁ</span><h1 id="hero-heading">Todo lo que te gusta,
+a un toque.</h1><p id="hero-intro">Explorá la carta, descubrí tus favoritos y hacé tu pedido de forma fácil y rápida.</p><button type="button" id="how-it-works" class="monti-help"><svg><use href="#i-share"/></svg> ¿Cómo funciona?</button></div><div class="hero-photos" aria-label="Ilustraciones originales de Tu Menú"><span class="hero-spark s1">✦</span><div class="hero-photo hero-art one" aria-hidden="true"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M15 60c5-29 19-38 35-38s31 9 35 38M10 65h80M50 11v12"/><path d="M24 51q8-9 17-1 7-13 17-1 10-10 19 1"/><circle cx="50" cy="11" r="3"/></svg></div><div class="hero-photo hero-art two" aria-hidden="true"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M22 38h52v32Q72 83 48 83T22 70Z"/><path d="M74 45q18-5 16 12-1 11-16 12M17 87h63M35 14q-7 8 0 17M53 12q-7 9 0 19"/></svg></div><div class="hero-photo hero-art three" aria-hidden="true"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M19 69 49 28 80 69Z"/><path d="M19 69h61v13H19Z"/><path d="M30 58h41M38 46h22"/><circle cx="49" cy="23" r="5"/></svg></div><span class="hero-spark s2">✦</span></div></section>
 <div class="main-layout"><div class="main-col"><div class="sectiontop"><div><h2>Elegí algo rico</h2><p>Explorá nuestra carta a tu manera</p></div><div class="service-tabs" id="service-tabs"><button class="active" data-service="resto">Restaurante</button><button data-service="cafe">Cafetería</button><button data-service="casa">Para llevar</button></div></div>
-<div class="filterbar"><label class="search-box"><svg><use href="#i-search"/></svg><input id="search" type="search" placeholder="Buscá pastas, café, postres…" autocomplete="off" aria-label="Buscar productos"></label><div class="chips" id="chips"></div></div><div id="products"></div><p class="info-note" id="catalog-note">Precios y productos tomados de las cartas suministradas de Monti. Las fotos son recortes ilustrativos de la carta; el menú y la disponibilidad deben verificarse antes de publicarse.</p></div><aside class="checkout-side"><div class="side-title"><strong>Tu pedido</strong><span id="side-table">Mesa 3</span></div><div id="cart-side"></div></aside></div></div></main>
+<div class="filterbar"><label class="search-box"><svg><use href="#i-search"/></svg><input id="search" type="search" placeholder="Buscá platos, cafés, postres…" autocomplete="off" aria-label="Buscar productos"></label><div class="chips" id="chips"></div></div><div id="products"></div><p class="info-note" id="catalog-note">Catálogo ficticio de demostración. Todos los productos y precios son ilustrativos; no corresponden a ningún comercio real.</p></div><aside class="checkout-side"><div class="side-title"><strong>Tu pedido</strong><span id="side-table">Mesa 3</span></div><div id="cart-side"></div></aside></div></div></main>
 <section id="admin-view" hidden><div class="wrap"><div class="admin-hero"><div><span class="eyebrow">Panel de demostración</span><h2>Gestión de tu local</h2><p>Habilitá mesas y gestioná cada pedido directamente en su tarjeta. Esta demo comparte datos solo entre pestañas del mismo navegador.</p></div><button id="back-menu">← Ver menú</button></div><div class="admin-grid" id="metrics"></div><div class="admin-actions" id="admin-tabs"><button data-admin-tab="dashboard">Resumen</button><button class="active" data-admin-tab="tables">Mesas y cuentas</button><button data-admin-tab="orders">Pedidos</button><button data-admin-tab="products">Productos</button><button data-admin-tab="settings">Personalización</button></div><div id="admin-content"></div></div></section>
 <div class="mobile-cart" id="mobile-cart" hidden><button class="primary" id="mobile-cart-button"><span>Ver mi pedido · <span id="mobile-num">0</span> productos</span><span id="mobile-total">$0 →</span></button></div>
 <footer class="footer"><span id="footer-local">Monti · Demostración independiente. No es una carta oficial ni procesa pedidos o pagos reales.</span><span>Responsive · PC · Android · iPhone</span></footer>
 <div class="overlay" id="overlay" hidden><div id="dialog" class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><div class="dlg-head"><h3 id="dialog-title"></h3><button class="closex" id="close-dialog" aria-label="Cerrar">×</button></div><div class="dialog-body" id="dialog-body"></div></div></div><div class="toast" id="toast" role="status"></div><div id="monti-qr-sheet" aria-hidden="true"></div>
 <script>/* Cambiar estos valores por los del local. Solo URLs HTTPS verificadas. */
 window.MENU_LOCAL_CONFIG={
-  "slug": "monti",
-  "name": "Monti",
-  "subtitle": "Bar de pastas y café",
+  "slug": "tumenu-demo",
+  "name": "Tu Menú",
+  "subtitle": "Cartas digitales interactivas",
   "theme": "terracotta",
   "template": "clasica",
   "businessType": "restaurant",
   "logoData": "",
   "palette": null,
+  "heroEyebrow": "DESCUBRÍ · ELEGÍ · DISFRUTÁ",
+  "heroTitle": "Todo lo que te gusta,\na un toque.",
+  "heroDescription": "Explorá la carta, descubrí tus favoritos y hacé tu pedido de forma fácil y rápida.",
   "instagram": "",
   "facebook": "",
   "tiktok": "",
   "googleReview": "",
   "farewell": "Esperamos que hayas disfrutado tu visita. ¡Te esperamos pronto!"
 };
-</script><script>/* Catálogo del restaurante. Datos provenientes de las cartas aportadas para la demo. */
+</script><script>/* Catálogo ficticio de demostración: ninguna carta ni precio pertenece a un comercio real. */
 window.MENU_CATALOG=[
   {
-    "id": "noquis",
+    "id": "demo-bruschettas",
     "sec": "resto",
-    "cat": "Pastas",
-    "name": "Ñoquis",
-    "price": 16000,
-    "desc": "Pastas caseras con la salsa que más te guste.",
+    "cat": "Entradas",
+    "name": "Bruschettas de tomate",
+    "price": 7900,
+    "desc": "Tostadas con tomate fresco y albahaca.",
     "photo": "",
-    "tag": "Vegano disponible",
+    "tag": "Vegetariano",
+    "opts": []
+  },
+  {
+    "id": "demo-papas-rusticas",
+    "sec": "resto",
+    "cat": "Entradas",
+    "name": "Papas rústicas",
+    "price": 9800,
+    "desc": "Papas al horno con dip casero.",
+    "photo": "",
+    "tag": "Para compartir",
     "opts": [
       {
-        "key": "salsa",
-        "label": "Elegí tu salsa (una incluida)",
+        "key": "dip",
+        "label": "Elegí un dip",
         "multi": false,
         "options": [
           {
-            "name": "Tuco",
+            "name": "Alioli",
             "price": 0
           },
           {
-            "name": "Blanca",
+            "name": "Salsa de yogur",
             "price": 0
           },
           {
-            "name": "Rosa",
-            "price": 0
-          },
-          {
-            "name": "Crema",
-            "price": 0
-          },
-          {
-            "name": "Bolognesa",
-            "price": 5000
-          },
-          {
-            "name": "Pesto",
-            "price": 4000
-          },
-          {
-            "name": "Crema y hongos",
-            "price": 3000
-          },
-          {
-            "name": "Crema, panceta y cebolla",
-            "price": 3000
-          },
-          {
-            "name": "Cheddar",
-            "price": 3000
-          },
-          {
-            "name": "Carbonara",
-            "price": 3000
-          },
-          {
-            "name": "Mix de quesos",
-            "price": 3000
-          },
-          {
-            "name": "Caprese",
-            "price": 2000
-          }
-        ]
-      },
-      {
-        "key": "extra",
-        "label": "¿Querés agregar algo?",
-        "multi": true,
-        "options": [
-          {
-            "name": "Meatballs",
-            "price": 8000
-          }
-        ]
-      },
-      {
-        "key": "vegan",
-        "label": "Preferencias",
-        "multi": true,
-        "options": [
-          {
-            "name": "Preparación vegana",
-            "price": 0
+            "name": "Salsa picante",
+            "price": 500
           }
         ]
       }
     ]
   },
   {
-    "id": "fusillis",
+    "id": "demo-empanadas",
     "sec": "resto",
-    "cat": "Pastas",
-    "name": "Fusillis",
-    "price": 16000,
-    "desc": "Fusillis con salsa incluida a elección.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "salsa",
-        "label": "Elegí tu salsa (una incluida)",
-        "multi": false,
-        "options": [
-          {
-            "name": "Tuco",
-            "price": 0
-          },
-          {
-            "name": "Blanca",
-            "price": 0
-          },
-          {
-            "name": "Rosa",
-            "price": 0
-          },
-          {
-            "name": "Crema",
-            "price": 0
-          },
-          {
-            "name": "Bolognesa",
-            "price": 5000
-          },
-          {
-            "name": "Pesto",
-            "price": 4000
-          },
-          {
-            "name": "Crema y hongos",
-            "price": 3000
-          },
-          {
-            "name": "Crema, panceta y cebolla",
-            "price": 3000
-          },
-          {
-            "name": "Cheddar",
-            "price": 3000
-          },
-          {
-            "name": "Carbonara",
-            "price": 3000
-          },
-          {
-            "name": "Mix de quesos",
-            "price": 3000
-          },
-          {
-            "name": "Caprese",
-            "price": 2000
-          }
-        ]
-      },
-      {
-        "key": "extra",
-        "label": "¿Querés agregar algo?",
-        "multi": true,
-        "options": [
-          {
-            "name": "Meatballs",
-            "price": 8000
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "spaghetti",
-    "sec": "resto",
-    "cat": "Pastas",
-    "name": "Spaghetti",
-    "price": 16000,
-    "desc": "Clásicos spaghetti con salsa incluida a elección.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "salsa",
-        "label": "Elegí tu salsa (una incluida)",
-        "multi": false,
-        "options": [
-          {
-            "name": "Tuco",
-            "price": 0
-          },
-          {
-            "name": "Blanca",
-            "price": 0
-          },
-          {
-            "name": "Rosa",
-            "price": 0
-          },
-          {
-            "name": "Crema",
-            "price": 0
-          },
-          {
-            "name": "Bolognesa",
-            "price": 5000
-          },
-          {
-            "name": "Pesto",
-            "price": 4000
-          },
-          {
-            "name": "Crema y hongos",
-            "price": 3000
-          },
-          {
-            "name": "Crema, panceta y cebolla",
-            "price": 3000
-          },
-          {
-            "name": "Cheddar",
-            "price": 3000
-          },
-          {
-            "name": "Carbonara",
-            "price": 3000
-          },
-          {
-            "name": "Mix de quesos",
-            "price": 3000
-          },
-          {
-            "name": "Caprese",
-            "price": 2000
-          }
-        ]
-      },
-      {
-        "key": "extra",
-        "label": "¿Querés agregar algo?",
-        "multi": true,
-        "options": [
-          {
-            "name": "Meatballs",
-            "price": 8000
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "ravioles",
-    "sec": "resto",
-    "cat": "Pastas",
-    "name": "Ravioles",
-    "price": 19000,
-    "desc": "Rellenos de ricota o pollo y verdura.",
+    "cat": "Entradas",
+    "name": "Empanadas artesanales",
+    "price": 7500,
+    "desc": "Porción de dos unidades.",
     "photo": "",
     "tag": "",
     "opts": [
@@ -663,166 +475,96 @@ window.MENU_CATALOG=[
         "multi": false,
         "options": [
           {
-            "name": "Ricota",
+            "name": "Carne suave",
             "price": 0
           },
           {
-            "name": "Pollo y verdura",
-            "price": 0
-          }
-        ]
-      },
-      {
-        "key": "salsa",
-        "label": "Elegí tu salsa (una incluida)",
-        "multi": false,
-        "options": [
-          {
-            "name": "Tuco",
+            "name": "Pollo",
             "price": 0
           },
           {
-            "name": "Blanca",
+            "name": "Verduras",
             "price": 0
-          },
-          {
-            "name": "Rosa",
-            "price": 0
-          },
-          {
-            "name": "Crema",
-            "price": 0
-          },
-          {
-            "name": "Bolognesa",
-            "price": 5000
-          },
-          {
-            "name": "Pesto",
-            "price": 4000
-          },
-          {
-            "name": "Crema y hongos",
-            "price": 3000
-          },
-          {
-            "name": "Crema, panceta y cebolla",
-            "price": 3000
-          },
-          {
-            "name": "Cheddar",
-            "price": 3000
-          },
-          {
-            "name": "Carbonara",
-            "price": 3000
-          },
-          {
-            "name": "Mix de quesos",
-            "price": 3000
-          },
-          {
-            "name": "Caprese",
-            "price": 2000
-          }
-        ]
-      },
-      {
-        "key": "extra",
-        "label": "¿Querés agregar algo?",
-        "multi": true,
-        "options": [
-          {
-            "name": "Meatballs",
-            "price": 8000
           }
         ]
       }
     ]
   },
   {
-    "id": "volcan",
+    "id": "demo-hamburguesa",
     "sec": "resto",
-    "cat": "Pastas",
-    "name": "Volcán de ñoquis",
-    "price": 22000,
-    "desc": "Especial de ñoquis. Opción vegana disponible.",
+    "cat": "Platos principales",
+    "name": "Hamburguesa de la casa",
+    "price": 17800,
+    "desc": "Medallón con vegetales y pan artesanal.",
     "photo": "",
-    "tag": "Vegano disponible",
+    "tag": "Popular",
     "opts": [
       {
-        "key": "salsa",
-        "label": "Elegí tu salsa (una incluida)",
+        "key": "acompanamiento",
+        "label": "Elegí un acompañamiento",
         "multi": false,
         "options": [
           {
-            "name": "Tuco",
+            "name": "Papas rústicas",
             "price": 0
           },
           {
-            "name": "Blanca",
+            "name": "Ensalada",
             "price": 0
           },
           {
-            "name": "Rosa",
+            "name": "Vegetales asados",
             "price": 0
-          },
-          {
-            "name": "Crema",
-            "price": 0
-          },
-          {
-            "name": "Bolognesa",
-            "price": 5000
-          },
-          {
-            "name": "Pesto",
-            "price": 4000
-          },
-          {
-            "name": "Crema y hongos",
-            "price": 3000
-          },
-          {
-            "name": "Crema, panceta y cebolla",
-            "price": 3000
-          },
-          {
-            "name": "Cheddar",
-            "price": 3000
-          },
-          {
-            "name": "Carbonara",
-            "price": 3000
-          },
-          {
-            "name": "Mix de quesos",
-            "price": 3000
-          },
-          {
-            "name": "Caprese",
-            "price": 2000
           }
         ]
       },
       {
-        "key": "extra",
+        "key": "agregados",
         "label": "¿Querés agregar algo?",
         "multi": true,
         "options": [
           {
-            "name": "Meatballs",
-            "price": 8000
+            "name": "Queso extra",
+            "price": 1200
+          },
+          {
+            "name": "Salsa extra",
+            "price": 1500
+          },
+          {
+            "name": "Papas adicionales",
+            "price": 2600
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "id": "demo-pollo",
+    "sec": "resto",
+    "cat": "Platos principales",
+    "name": "Pollo grillado",
+    "price": 17500,
+    "desc": "Pechuga grillada con guarnición a elección.",
+    "photo": "",
+    "tag": "",
+    "opts": [
       {
-        "key": "vegan",
-        "label": "Preferencias",
-        "multi": true,
+        "key": "acompanamiento",
+        "label": "Elegí un acompañamiento",
+        "multi": false,
         "options": [
           {
-            "name": "Preparación vegana",
+            "name": "Papas rústicas",
+            "price": 0
+          },
+          {
+            "name": "Ensalada",
+            "price": 0
+          },
+          {
+            "name": "Vegetales asados",
             "price": 0
           }
         ]
@@ -830,107 +572,105 @@ window.MENU_CATALOG=[
     ]
   },
   {
-    "id": "mac",
+    "id": "demo-pizza",
     "sec": "resto",
-    "cat": "Especiales",
-    "name": "Mac & Cheese",
-    "price": 22000,
-    "desc": "Macarrones con cheddar, muzza, panceta y ciboulette.",
+    "cat": "Platos principales",
+    "name": "Pizza de mozzarella",
+    "price": 18600,
+    "desc": "Pizza grande con salsa de tomate y mozzarella.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "agregados",
+        "label": "Agregados",
+        "multi": true,
+        "options": [
+          {
+            "name": "Tomate",
+            "price": 900
+          },
+          {
+            "name": "Aceitunas",
+            "price": 800
+          },
+          {
+            "name": "Rúcula",
+            "price": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-sandwich-bondiola",
+    "sec": "resto",
+    "cat": "Platos principales",
+    "name": "Sándwich de cerdo braseado",
+    "price": 18200,
+    "desc": "Cerdo desmechado, vegetales y pan tostado.",
     "photo": "",
     "tag": "",
     "opts": []
   },
   {
-    "id": "brasato",
+    "id": "demo-wok",
     "sec": "resto",
-    "cat": "Especiales",
-    "name": "Grand Brasato Raviolo",
-    "price": 27000,
-    "desc": "Ternera braseada, centro de reggianito fundido y manteca de salvia.",
+    "cat": "Platos principales",
+    "name": "Wok de vegetales",
+    "price": 16200,
+    "desc": "Salteado de vegetales frescos y arroz.",
     "photo": "",
-    "tag": "Nuevo",
+    "tag": "Vegano",
     "opts": []
   },
   {
-    "id": "batata",
+    "id": "demo-bowl",
     "sec": "resto",
-    "cat": "Especiales",
-    "name": "Batata Supremo",
-    "price": 28000,
-    "desc": "Raviolones de batata, crema, champiñones, cherry, panceta y pollo.",
+    "cat": "Opciones veggie",
+    "name": "Bowl mediterráneo",
+    "price": 15900,
+    "desc": "Arroz, vegetales, hummus y semillas.",
     "photo": "",
-    "tag": "",
+    "tag": "Vegano",
     "opts": []
   },
   {
-    "id": "lasagna",
+    "id": "demo-tarta",
     "sec": "resto",
-    "cat": "Lasagnas",
-    "name": "Lasagna clásica",
-    "price": 26000,
-    "desc": "Bolognesa y muzza gratinada sobre salsa blanca.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "lasagna-verde",
-    "sec": "resto",
-    "cat": "Lasagnas",
-    "name": "Lasagna de espinaca",
-    "price": 26000,
-    "desc": "Ricota y muzza gratinada sobre salsa de tomate.",
+    "cat": "Opciones veggie",
+    "name": "Tarta de verduras",
+    "price": 14200,
+    "desc": "Tarta casera con ensalada de estación.",
     "photo": "",
     "tag": "Vegetariano",
     "opts": []
   },
   {
-    "id": "empanada",
+    "id": "demo-brownie",
     "sec": "resto",
-    "cat": "Entradas",
-    "name": "Empanada de carne frita",
-    "price": 4500,
-    "desc": "Empanada frita, ideal para empezar.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "papas-cheddar",
-    "sec": "resto",
-    "cat": "Entradas",
-    "name": "Papas con cheddar",
-    "price": 7900,
-    "desc": "Papas con cheddar, panceta y ciboulette.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "suprema",
-    "sec": "resto",
-    "cat": "Milanesas",
-    "name": "Suprema con guarnición",
-    "price": 22000,
-    "desc": "Elegí ensalada, spaghetti o papas fritas.",
+    "cat": "Postres",
+    "name": "Brownie con helado",
+    "price": 9200,
+    "desc": "Brownie tibio y una bocha de helado.",
     "photo": "",
     "tag": "",
     "opts": [
       {
-        "key": "guarnicion",
-        "label": "Elegí la guarnición",
+        "key": "sabor",
+        "label": "Elegí el sabor",
         "multi": false,
         "options": [
           {
-            "name": "Papas fritas",
+            "name": "Crema",
             "price": 0
           },
           {
-            "name": "Spaghetti",
+            "name": "Chocolate",
             "price": 0
           },
           {
-            "name": "Ensalada",
+            "name": "Frutilla",
             "price": 0
           }
         ]
@@ -938,150 +678,67 @@ window.MENU_CATALOG=[
     ]
   },
   {
-    "id": "suprema-napo",
+    "id": "demo-flan",
     "sec": "resto",
-    "cat": "Milanesas",
-    "name": "Suprema Napo",
-    "price": 24000,
-    "desc": "Suprema napolitana con guarnición.",
+    "cat": "Postres",
+    "name": "Flan casero",
+    "price": 7800,
+    "desc": "Flan de vainilla con caramelo.",
     "photo": "",
     "tag": "",
     "opts": [
       {
-        "key": "guarnicion",
-        "label": "Elegí la guarnición",
-        "multi": false,
-        "options": [
-          {
-            "name": "Papas fritas",
-            "price": 0
-          },
-          {
-            "name": "Spaghetti",
-            "price": 0
-          },
-          {
-            "name": "Ensalada",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "mac-mila",
-    "sec": "resto",
-    "cat": "Milanesas",
-    "name": "Mac & Mila Suprema",
-    "price": 25000,
-    "desc": "Suprema con macarrones, cheddar y papas fritas.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "caesar",
-    "sec": "resto",
-    "cat": "Ensaladas",
-    "name": "Ensalada Caesar",
-    "price": 15000,
-    "desc": "Mix de verdes, pollo grillé, panceta y queso reggianito.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "crispy",
-        "label": "Personalizá tu ensalada",
-        "multi": true,
-        "options": [
-          {
-            "name": "Cambiar a pollo crispy",
-            "price": 2500
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "mediterranea",
-    "sec": "resto",
-    "cat": "Ensaladas",
-    "name": "Mediterránea",
-    "price": 15000,
-    "desc": "Fusillis, rúcula, pollo, cherry y láminas de reggianito.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "chocotorta",
-    "sec": "resto",
-    "cat": "Postres",
-    "name": "Chocotorta",
-    "price": 7000,
-    "desc": "Porción de chocotorta.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "mini-choco",
-    "sec": "resto",
-    "cat": "Postres",
-    "name": "Mini chocotorta",
-    "price": 3500,
-    "desc": "Una versión más pequeña del clásico.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "tiramisu",
-    "sec": "resto",
-    "cat": "Postres",
-    "name": "Tiramisú",
-    "price": 6500,
-    "desc": "Postre clásico italiano.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "flan",
-    "sec": "resto",
-    "cat": "Postres",
-    "name": "Flan",
-    "price": 3800,
-    "desc": "Flan tradicional.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "ddl",
-        "label": "Agregados",
+        "key": "agregado",
+        "label": "Agregado",
         "multi": true,
         "options": [
           {
             "name": "Dulce de leche",
-            "price": 2500
+            "price": 700
+          },
+          {
+            "name": "Crema",
+            "price": 700
           }
         ]
       }
     ]
   },
   {
-    "id": "agua",
+    "id": "demo-frutas",
+    "sec": "resto",
+    "cat": "Postres",
+    "name": "Copa de frutas",
+    "price": 7600,
+    "desc": "Frutas de estación servidas frescas.",
+    "photo": "",
+    "tag": "Vegano",
+    "opts": []
+  },
+  {
+    "id": "demo-limonada",
     "sec": "resto",
     "cat": "Bebidas",
-    "name": "Agua con o sin gas",
-    "price": 4000,
-    "desc": "Agua mineral.",
+    "name": "Limonada clásica",
+    "price": 5500,
+    "desc": "Limón exprimido, agua y hielo.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-agua",
+    "sec": "resto",
+    "cat": "Bebidas",
+    "name": "Agua mineral",
+    "price": 3800,
+    "desc": "Botella individual.",
     "photo": "",
     "tag": "",
     "opts": [
       {
         "key": "tipo",
-        "label": "Tipo de agua",
+        "label": "Elegí una opción",
         "multi": false,
         "options": [
           {
@@ -1097,1109 +754,411 @@ window.MENU_CATALOG=[
     ]
   },
   {
-    "id": "sifon",
-    "sec": "resto",
-    "cat": "Bebidas",
-    "name": "Sifón 650 cc",
-    "price": 3800,
-    "desc": "Soda en sifón.",
+    "id": "demo-espresso",
+    "sec": "cafe",
+    "cat": "Cafés",
+    "name": "Café espresso",
+    "price": 3700,
+    "desc": "Café corto de tueste medio.",
     "photo": "",
     "tag": "",
     "opts": []
   },
   {
-    "id": "gaseosa",
-    "sec": "resto",
-    "cat": "Bebidas",
-    "name": "Gaseosas",
+    "id": "demo-cappuccino",
+    "sec": "cafe",
+    "cat": "Cafés",
+    "name": "Cappuccino",
+    "price": 5600,
+    "desc": "Espresso, leche y espuma suave.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "tamano",
+        "label": "Elegí el tamaño",
+        "multi": false,
+        "options": [
+          {
+            "name": "Mediano",
+            "price": 0
+          },
+          {
+            "name": "Grande",
+            "price": 1300
+          }
+        ]
+      },
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-cafe-leche",
+    "sec": "cafe",
+    "cat": "Cafés",
+    "name": "Café con leche",
+    "price": 4900,
+    "desc": "Espresso con leche caliente.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "tamano",
+        "label": "Elegí el tamaño",
+        "multi": false,
+        "options": [
+          {
+            "name": "Mediano",
+            "price": 0
+          },
+          {
+            "name": "Grande",
+            "price": 1300
+          }
+        ]
+      },
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-te",
+    "sec": "cafe",
+    "cat": "Infusiones",
+    "name": "Té en hebras",
     "price": 4500,
-    "desc": "Elegí tu gaseosa al pedir.",
+    "desc": "Infusión con selección de variedades.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "te",
+        "label": "Variedad",
+        "multi": false,
+        "options": [
+          {
+            "name": "Negro",
+            "price": 0
+          },
+          {
+            "name": "Verde",
+            "price": 0
+          },
+          {
+            "name": "Frutos rojos",
+            "price": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-chai",
+    "sec": "cafe",
+    "cat": "Infusiones",
+    "name": "Chai latte",
+    "price": 6100,
+    "desc": "Bebida especiada con leche caliente.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-combo",
+    "sec": "cafe",
+    "cat": "Desayunos",
+    "name": "Combo café y tostadas",
+    "price": 9700,
+    "desc": "Bebida caliente y tostadas con queso crema.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-palta",
+    "sec": "cafe",
+    "cat": "Desayunos",
+    "name": "Tostada con palta",
+    "price": 11900,
+    "desc": "Pan de campo, palta y semillas.",
+    "photo": "",
+    "tag": "Vegetariano",
+    "opts": []
+  },
+  {
+    "id": "demo-tostado",
+    "sec": "cafe",
+    "cat": "Desayunos",
+    "name": "Tostado clásico",
+    "price": 9200,
+    "desc": "Pan dorado con jamón y queso.",
     "photo": "",
     "tag": "",
     "opts": []
   },
   {
-    "id": "jarra-limon1",
-    "sec": "resto",
-    "cat": "Bebidas",
-    "name": "Jarra de limón 1 L",
-    "price": 8500,
-    "desc": "Limonada de un litro.",
+    "id": "demo-cookie",
+    "sec": "cafe",
+    "cat": "Dulces",
+    "name": "Cookie de chocolate",
+    "price": 4300,
+    "desc": "Galleta artesanal con chips de chocolate.",
     "photo": "",
     "tag": "",
     "opts": []
   },
   {
-    "id": "jarra-limon05",
-    "sec": "resto",
-    "cat": "Bebidas",
-    "name": "Jarra de limón ½ L",
-    "price": 4500,
-    "desc": "Limonada de medio litro.",
+    "id": "demo-torta",
+    "sec": "cafe",
+    "cat": "Dulces",
+    "name": "Porción de torta",
+    "price": 8400,
+    "desc": "Elegí entre las opciones del día.",
     "photo": "",
     "tag": "",
-    "opts": []
+    "opts": [
+      {
+        "key": "sabor",
+        "label": "Elegí el sabor",
+        "multi": false,
+        "options": [
+          {
+            "name": "Chocolate",
+            "price": 0
+          },
+          {
+            "name": "Vainilla",
+            "price": 0
+          },
+          {
+            "name": "Frutas",
+            "price": 0
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "exprimido-rest",
-    "sec": "resto",
-    "cat": "Bebidas",
-    "name": "Exprimido de naranja",
-    "price": 5500,
+    "id": "demo-cafe-frio",
+    "sec": "cafe",
+    "cat": "Bebidas frías",
+    "name": "Café frío",
+    "price": 6300,
+    "desc": "Café suave servido con hielo.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-jugo",
+    "sec": "cafe",
+    "cat": "Bebidas frías",
+    "name": "Jugo exprimido",
+    "price": 5900,
     "desc": "Jugo natural de naranja.",
     "photo": "",
     "tag": "",
     "opts": []
   },
   {
-    "id": "licuado-rest",
-    "sec": "resto",
-    "cat": "Bebidas",
-    "name": "Licuado de banana",
+    "id": "demo-bagel",
+    "sec": "casa",
+    "cat": "Comidas para llevar",
+    "name": "Bagel de pollo",
+    "price": 12100,
+    "desc": "Bagel con pollo, hojas verdes y aderezo.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-wrap",
+    "sec": "casa",
+    "cat": "Comidas para llevar",
+    "name": "Wrap vegetariano",
+    "price": 11200,
+    "desc": "Tortilla con vegetales, hummus y semillas.",
+    "photo": "",
+    "tag": "Vegetariano",
+    "opts": []
+  },
+  {
+    "id": "demo-sandwich",
+    "sec": "casa",
+    "cat": "Comidas para llevar",
+    "name": "Sándwich de queso",
+    "price": 10800,
+    "desc": "Pan artesanal, quesos y tomates.",
+    "photo": "",
+    "tag": "Vegetariano",
+    "opts": []
+  },
+  {
+    "id": "demo-ensalada",
+    "sec": "casa",
+    "cat": "Comidas para llevar",
+    "name": "Ensalada en bowl",
+    "price": 12900,
+    "desc": "Vegetales frescos y aderezo aparte.",
+    "photo": "",
+    "tag": "Vegano",
+    "opts": []
+  },
+  {
+    "id": "demo-iced-latte",
+    "sec": "casa",
+    "cat": "Bebidas para llevar",
+    "name": "Iced latte",
     "price": 6500,
-    "desc": "Licuado fresco de banana.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "limon-frozen",
-    "sec": "resto",
-    "cat": "Bebidas",
-    "name": "Limonada frozen",
-    "price": 5000,
-    "desc": "Limonada frozen.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "limon-menta",
-    "sec": "resto",
-    "cat": "Bebidas",
-    "name": "Frozen menta y jengibre",
-    "price": 5500,
-    "desc": "Limonada frozen con menta y jengibre.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "smoothie-rest",
-    "sec": "resto",
-    "cat": "Bebidas",
-    "name": "Smoothie de frutas",
-    "price": 6000,
-    "desc": "Frutilla o frutos rojos.",
+    "desc": "Café con leche fría y hielo.",
     "photo": "",
     "tag": "",
     "opts": [
       {
-        "key": "sabor",
-        "label": "Elegí el sabor",
+        "key": "leche",
+        "label": "Elegí la leche",
         "multi": false,
         "options": [
           {
-            "name": "Frutilla",
+            "name": "Tradicional",
             "price": 0
           },
           {
-            "name": "Frutos rojos",
-            "price": 0
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
           }
         ]
       }
     ]
   },
   {
-    "id": "cinzano",
-    "sec": "resto",
-    "cat": "Con alcohol",
-    "name": "Cinzano",
-    "price": 7000,
-    "desc": "Aperitivo.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "campari",
-    "sec": "resto",
-    "cat": "Con alcohol",
-    "name": "Campari",
-    "price": 8500,
-    "desc": "Aperitivo.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "estrella",
-    "sec": "resto",
-    "cat": "Con alcohol",
-    "name": "Estrella Galicia 473 cc",
-    "price": 7000,
-    "desc": "Cerveza en lata.",
-    "photo": "",
-    "tag": "Nuevo",
-    "opts": []
-  },
-  {
-    "id": "malbec375",
-    "sec": "resto",
-    "cat": "Vinos",
-    "name": "Santa Julia Malbec 375 cc",
-    "price": 9900,
-    "desc": "Botella de 375 cc.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "malbec750",
-    "sec": "resto",
-    "cat": "Vinos",
-    "name": "Santa Julia Malbec 750 cc",
-    "price": 14500,
-    "desc": "Botella de 750 cc.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "chardonnay375",
-    "sec": "resto",
-    "cat": "Vinos",
-    "name": "Santa Julia Chardonnay 375 cc",
-    "price": 9900,
-    "desc": "Botella de 375 cc.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "chardonnay750",
-    "sec": "resto",
-    "cat": "Vinos",
-    "name": "Santa Julia Chardonnay 750 cc",
-    "price": 14500,
-    "desc": "Botella de 750 cc.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "reserva750",
-    "sec": "resto",
-    "cat": "Vinos",
-    "name": "Santa Julia Reserva Malbec 750 cc",
-    "price": 16500,
-    "desc": "Botella de 750 cc.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "zuccardi375",
-    "sec": "resto",
-    "cat": "Vinos",
-    "name": "Zuccardi Serie A Malbec 375 cc",
-    "price": 13900,
-    "desc": "Botella de 375 cc.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "zuccardi750",
-    "sec": "resto",
-    "cat": "Vinos",
-    "name": "Zuccardi Serie A Malbec 750 cc",
-    "price": 23500,
-    "desc": "Botella de 750 cc.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "tardia",
-    "sec": "resto",
-    "cat": "Vinos",
-    "name": "Santa Julia Cosecha Tardía 500 cc",
-    "price": 16000,
-    "desc": "Botella de 500 cc.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "focacci-mila",
-    "sec": "resto",
-    "cat": "Focacci",
-    "name": "Focacci Mila Clásica",
-    "price": 19900,
-    "desc": "Milanesa de pollo o carne, lechuga, tomate, mayonesa ahumada y papas fritas.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "carne",
-        "label": "Elegí tu milanesa",
-        "multi": false,
-        "options": [
-          {
-            "name": "Pollo",
-            "price": 0
-          },
-          {
-            "name": "Carne",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "focacci-caesar",
-    "sec": "resto",
-    "cat": "Focacci",
-    "name": "Focacci Caesar Chicken",
-    "price": 19000,
-    "desc": "Pollo grillé, lechuga, panceta, queso, salsa Caesar y papas fritas.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "focacci-morta",
-    "sec": "resto",
-    "cat": "Focacci",
-    "name": "Focacci Mortadela con Pistacho",
-    "price": 16900,
-    "desc": "Mortadela, rúcula, albahaca, queso crema, oliva, cherry confitado y papas fritas.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "lunes",
-    "sec": "resto",
-    "cat": "Menú semanal",
-    "name": "Lunes · Caesar crispy",
-    "price": 17500,
-    "desc": "Menú del día: incluye limonada o gaseosa y mousse de chocolate.",
-    "photo": "",
-    "tag": "Menú semanal",
-    "opts": [
-      {
-        "key": "bebida",
-        "label": "Bebida incluida",
-        "multi": false,
-        "options": [
-          {
-            "name": "Limonada",
-            "price": 0
-          },
-          {
-            "name": "Gaseosa",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "martes",
-    "sec": "resto",
-    "cat": "Menú semanal",
-    "name": "Martes · Carbonara spaghetti",
-    "price": 17500,
-    "desc": "Incluye limonada o gaseosa y mousse de chocolate.",
-    "photo": "",
-    "tag": "Menú semanal",
-    "opts": [
-      {
-        "key": "bebida",
-        "label": "Bebida incluida",
-        "multi": false,
-        "options": [
-          {
-            "name": "Limonada",
-            "price": 0
-          },
-          {
-            "name": "Gaseosa",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "miercoles",
-    "sec": "resto",
-    "cat": "Menú semanal",
-    "name": "Miércoles · Suprema caprese",
-    "price": 17500,
-    "desc": "Con papas. Incluye limonada o gaseosa y mousse de chocolate.",
-    "photo": "",
-    "tag": "Menú semanal",
-    "opts": [
-      {
-        "key": "bebida",
-        "label": "Bebida incluida",
-        "multi": false,
-        "options": [
-          {
-            "name": "Limonada",
-            "price": 0
-          },
-          {
-            "name": "Gaseosa",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "jueves",
-    "sec": "resto",
-    "cat": "Menú semanal",
-    "name": "Jueves · Ñoquis",
-    "price": 17500,
-    "desc": "Salsa rosa, tuco o blanca. Incluye bebida y mousse.",
-    "photo": "",
-    "tag": "Menú semanal",
-    "opts": [
-      {
-        "key": "salsa",
-        "label": "Elegí tu salsa",
-        "multi": false,
-        "options": [
-          {
-            "name": "Rosa",
-            "price": 0
-          },
-          {
-            "name": "Tuco",
-            "price": 0
-          },
-          {
-            "name": "Blanca",
-            "price": 0
-          }
-        ]
-      },
-      {
-        "key": "bebida",
-        "label": "Bebida incluida",
-        "multi": false,
-        "options": [
-          {
-            "name": "Limonada",
-            "price": 0
-          },
-          {
-            "name": "Gaseosa",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "viernes",
-    "sec": "resto",
-    "cat": "Menú semanal",
-    "name": "Viernes · Focacci",
-    "price": 17500,
-    "desc": "Focacci a elección. Incluye bebida y mousse.",
-    "photo": "",
-    "tag": "Menú semanal",
-    "opts": [
-      {
-        "key": "focacci",
-        "label": "Elegí tu focacci",
-        "multi": false,
-        "options": [
-          {
-            "name": "Mila Clásica",
-            "price": 0
-          },
-          {
-            "name": "Caesar Chicken",
-            "price": 0
-          },
-          {
-            "name": "Mortadela con Pistacho",
-            "price": 0
-          }
-        ]
-      },
-      {
-        "key": "bebida",
-        "label": "Bebida incluida",
-        "multi": false,
-        "options": [
-          {
-            "name": "Limonada",
-            "price": 0
-          },
-          {
-            "name": "Gaseosa",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "kid-papas",
-    "sec": "resto",
-    "cat": "Menú kids",
-    "name": "Chicken Fingers + papas",
-    "price": 16000,
-    "desc": "Incluye mini chocotorta y bebida.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "kid-spaghetti",
-    "sec": "resto",
-    "cat": "Menú kids",
-    "name": "Chicken Fingers + spaghetti",
-    "price": 16000,
-    "desc": "Incluye mini chocotorta y bebida.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "cafe-chico",
-    "sec": "cafe",
-    "cat": "Para tomar",
-    "name": "Café chico",
-    "price": 2900,
-    "desc": "Un clásico para cualquier momento.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "cafe-jarrito",
-    "sec": "cafe",
-    "cat": "Para tomar",
-    "name": "Café en jarrito",
-    "price": 2999,
-    "desc": "Café servido en jarrito.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "cafe-doble",
-    "sec": "cafe",
-    "cat": "Para tomar",
-    "name": "Café doble / café con leche",
-    "price": 3800,
-    "desc": "Elegí tu preparación.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "cafe",
-        "label": "Elegí",
-        "multi": false,
-        "options": [
-          {
-            "name": "Café doble",
-            "price": 0
-          },
-          {
-            "name": "Café con leche",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "te",
-    "sec": "cafe",
-    "cat": "Para tomar",
-    "name": "Té / mate cocido",
-    "price": 3000,
-    "desc": "Infusión calentita.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "infusion",
-        "label": "Elegí",
-        "multi": false,
-        "options": [
-          {
-            "name": "Té",
-            "price": 0
-          },
-          {
-            "name": "Mate cocido",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "capuccino",
-    "sec": "cafe",
-    "cat": "Para tomar",
-    "name": "Capuccino",
-    "price": 5000,
-    "desc": "Capuccino cremoso.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "submarino",
-    "sec": "cafe",
-    "cat": "Para tomar",
-    "name": "Submarino",
-    "price": 5500,
-    "desc": "Chocolate en leche caliente.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "chocolatada",
-    "sec": "cafe",
-    "cat": "Para tomar",
-    "name": "Chocolatada",
-    "price": 5000,
-    "desc": "Leche chocolatada.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "licuado",
-    "sec": "cafe",
-    "cat": "Fríos y licuados",
-    "name": "Licuado de banana",
-    "price": 6500,
-    "desc": "Licuado de banana.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "exprimido",
-    "sec": "cafe",
-    "cat": "Fríos y licuados",
-    "name": "Exprimido de naranja 350 cc",
-    "price": 5000,
-    "desc": "Jugo de naranja recién exprimido.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "limon500",
-    "sec": "cafe",
-    "cat": "Fríos y licuados",
-    "name": "Limonada 500 cc",
-    "price": 4500,
-    "desc": "Limonada fresca.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "frozen",
-    "sec": "cafe",
-    "cat": "Fríos y licuados",
-    "name": "Limonada frozen",
-    "price": 5000,
-    "desc": "Con hielo, bien fresca.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "frozen-menta",
-    "sec": "cafe",
-    "cat": "Fríos y licuados",
-    "name": "Frozen de menta y jengibre",
-    "price": 5500,
-    "desc": "Limonada frozen con menta y jengibre.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "smoothie",
-    "sec": "cafe",
-    "cat": "Fríos y licuados",
-    "name": "Smoothie de frutas",
-    "price": 6000,
-    "desc": "Frutilla o frutos rojos.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "sabor",
-        "label": "Elegí el sabor",
-        "multi": false,
-        "options": [
-          {
-            "name": "Frutilla",
-            "price": 0
-          },
-          {
-            "name": "Frutos rojos",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "frappe",
-    "sec": "cafe",
-    "cat": "Fríos y licuados",
-    "name": "Frappé latte",
-    "price": 5500,
-    "desc": "Frappé de café con leche.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "frappe-moca",
-    "sec": "cafe",
-    "cat": "Fríos y licuados",
-    "name": "Frappé Moca",
-    "price": 6500,
-    "desc": "Frappé con sabor a chocolate.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "medialuna",
-    "sec": "cafe",
-    "cat": "Para comer",
-    "name": "Medialuna de manteca",
-    "price": 1700,
-    "desc": "Medialuna recién hecha.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "medialuna-jq",
-    "sec": "cafe",
-    "cat": "Para comer",
-    "name": "Medialuna de jamón y queso",
-    "price": 2700,
-    "desc": "Medialuna rellena.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "tostadas",
-    "sec": "cafe",
-    "cat": "Para comer",
-    "name": "Tostadas con mermelada y queso",
-    "price": 3800,
-    "desc": "Dos unidades con queso crema.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "tostado",
-    "sec": "cafe",
-    "cat": "Para comer",
-    "name": "Tostado de jamón y queso",
-    "price": 5000,
-    "desc": "En pan de molde.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "revuelto",
-    "sec": "cafe",
-    "cat": "Para comer",
-    "name": "Revuelto con panceta",
-    "price": 5500,
-    "desc": "Huevos revueltos con panceta.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "mini-choco-cafe",
-    "sec": "cafe",
-    "cat": "Tortas",
-    "name": "Mini chocotorta",
-    "price": 3500,
-    "desc": "Porción mini de chocotorta.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "choco-cafe",
-    "sec": "cafe",
-    "cat": "Tortas",
-    "name": "Chocotorta",
-    "price": 7000,
-    "desc": "Porción de chocotorta.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "tira-cafe",
-    "sec": "cafe",
-    "cat": "Tortas",
-    "name": "Tiramisú",
-    "price": 6500,
-    "desc": "Postre italiano.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "combo-1",
-    "sec": "cafe",
-    "cat": "Combos",
-    "name": "Jarrito + medialuna",
-    "price": 2999,
-    "desc": "Combo de desayuno o merienda.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "combo-2",
-    "sec": "cafe",
-    "cat": "Combos",
-    "name": "Café con leche + medialuna J&Q",
-    "price": 5900,
-    "desc": "Infusión con medialuna rellena.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "combo-3",
-    "sec": "cafe",
-    "cat": "Combos",
-    "name": "Café doble + 2 medialunas",
-    "price": 4999,
-    "desc": "Ideal para empezar el día.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "combo-4",
-    "sec": "cafe",
-    "cat": "Combos",
-    "name": "Café doble + torta",
-    "price": 7500,
-    "desc": "Café doble y porción de torta.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "combo-5",
-    "sec": "cafe",
-    "cat": "Combos",
-    "name": "Café doble + tostadas",
-    "price": 6000,
-    "desc": "Con mermelada y queso.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "combo-6",
-    "sec": "cafe",
-    "cat": "Combos",
-    "name": "Café + tostado",
-    "price": 7500,
-    "desc": "Combo de café con tostado.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "combo-7",
-    "sec": "cafe",
-    "cat": "Combos",
-    "name": "Café + huevos con panceta",
-    "price": 7800,
-    "desc": "Desayuno completo.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "merienda",
-    "sec": "cafe",
-    "cat": "Para compartir",
-    "name": "Merienda clásica para 2",
-    "price": 29900,
-    "desc": "2 infusiones, 2 jugos chicos, 2 mini chocotortas, 2 medialunas, tostadas y 2 tostados J&Q.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "infusion",
-        "label": "Elegí las infusiones",
-        "multi": false,
-        "options": [
-          {
-            "name": "2 cafés",
-            "price": 0
-          },
-          {
-            "name": "2 tés",
-            "price": 0
-          },
-          {
-            "name": "1 café y 1 té",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "brunch",
-    "sec": "cafe",
-    "cat": "Para compartir",
-    "name": "Brunch para 2 personas",
-    "price": 29000,
-    "desc": "2 infusiones, revuelto con panceta, 2 medialunas J&Q, torta a elección y limonada 500 cc.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "torta",
-        "label": "Elegí la torta",
-        "multi": false,
-        "options": [
-          {
-            "name": "Chocotorta",
-            "price": 0
-          },
-          {
-            "name": "Tiramisú",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "casa-nq250",
+    "id": "demo-agua-sab",
     "sec": "casa",
-    "cat": "Pastas frescas",
-    "name": "Ñoquis · ¼ kg",
-    "price": 4250,
-    "desc": "Pastas frescas listas para cocinar en casa.",
+    "cat": "Bebidas para llevar",
+    "name": "Agua saborizada",
+    "price": 4700,
+    "desc": "Bebida sin alcohol, variedad del día.",
     "photo": "",
     "tag": "",
     "opts": []
   },
   {
-    "id": "casa-nq500",
+    "id": "demo-cookie-llevar",
     "sec": "casa",
-    "cat": "Pastas frescas",
-    "name": "Ñoquis · ½ kg",
-    "price": 8500,
-    "desc": "Pastas frescas listas para cocinar en casa.",
+    "cat": "Dulces para llevar",
+    "name": "Cookie artesanal",
+    "price": 4300,
+    "desc": "Galleta con chocolate para acompañar.",
     "photo": "",
     "tag": "",
     "opts": []
   },
   {
-    "id": "casa-nq1000",
+    "id": "demo-brownie-llevar",
     "sec": "casa",
-    "cat": "Pastas frescas",
-    "name": "Ñoquis · 1 kg",
-    "price": 17000,
-    "desc": "Pastas frescas listas para cocinar en casa.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "casa-fu250",
-    "sec": "casa",
-    "cat": "Pastas frescas",
-    "name": "Fusillis · ¼ kg",
-    "price": 4250,
-    "desc": "Pastas frescas listas para cocinar en casa.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "casa-fu500",
-    "sec": "casa",
-    "cat": "Pastas frescas",
-    "name": "Fusillis · ½ kg",
-    "price": 8500,
-    "desc": "Pastas frescas listas para cocinar en casa.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "casa-fu1000",
-    "sec": "casa",
-    "cat": "Pastas frescas",
-    "name": "Fusillis · 1 kg",
-    "price": 17000,
-    "desc": "Pastas frescas listas para cocinar en casa.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "casa-sp250",
-    "sec": "casa",
-    "cat": "Pastas frescas",
-    "name": "Spaghetti · ¼ kg",
-    "price": 4250,
-    "desc": "Pastas frescas listas para cocinar en casa.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "casa-sp500",
-    "sec": "casa",
-    "cat": "Pastas frescas",
-    "name": "Spaghetti · ½ kg",
-    "price": 8500,
-    "desc": "Pastas frescas listas para cocinar en casa.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "casa-sp1000",
-    "sec": "casa",
-    "cat": "Pastas frescas",
-    "name": "Spaghetti · 1 kg",
-    "price": 17000,
-    "desc": "Pastas frescas listas para cocinar en casa.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "casa-ravioles",
-    "sec": "casa",
-    "cat": "Ravioles",
-    "name": "Ravioles por plancha",
-    "price": 11000,
-    "desc": "Relleno de ricota o pollo y verdura.",
-    "photo": "",
-    "tag": "",
-    "opts": [
-      {
-        "key": "relleno",
-        "label": "Elegí el relleno",
-        "multi": false,
-        "options": [
-          {
-            "name": "Ricota",
-            "price": 0
-          },
-          {
-            "name": "Pollo y verdura",
-            "price": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "salsa-tuco",
-    "sec": "casa",
-    "cat": "Salsas",
-    "name": "Salsa tuco 340 g",
-    "price": 13000,
-    "desc": "Salsa casera para acompañar tus pastas.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "salsa-pesto",
-    "sec": "casa",
-    "cat": "Salsas",
-    "name": "Salsa pesto 200 g",
-    "price": 16000,
-    "desc": "Salsa pesto para pastas.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "salsa-bolo",
-    "sec": "casa",
-    "cat": "Salsas",
-    "name": "Salsa bolognesa 340 g",
-    "price": 16000,
-    "desc": "Salsa bolognesa.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "salsa-rosa",
-    "sec": "casa",
-    "cat": "Salsas",
-    "name": "Salsa rosa 340 g",
-    "price": 10000,
-    "desc": "Salsa rosa.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "salsa-blanca",
-    "sec": "casa",
-    "cat": "Salsas",
-    "name": "Salsa blanca 340 g",
-    "price": 9000,
-    "desc": "Salsa blanca.",
-    "photo": "",
-    "tag": "",
-    "opts": []
-  },
-  {
-    "id": "queso",
-    "sec": "casa",
-    "cat": "Extras",
-    "name": "Queso 150 g",
-    "price": 9500,
-    "desc": "Queso para tus pastas.",
+    "cat": "Dulces para llevar",
+    "name": "Mini brownie",
+    "price": 6100,
+    "desc": "Porción de brownie para llevar.",
     "photo": "",
     "tag": "",
     "opts": []
@@ -2213,12 +1172,12 @@ const esc=(v)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':
 const storage={get(key,fall){try{return JSON.parse(localStorage.getItem(key))??fall}catch(e){return fall}},put(key,val){try{localStorage.setItem(key,JSON.stringify(val))}catch(e){}}};
 const data=Array.isArray(window.MENU_CATALOG)?window.MENU_CATALOG:[];
 const SEC_LABEL={resto:'Restaurante',cafe:'Cafetería',casa:'Para llevar'};
-const SLUG=(window.MENU_LOCAL_CONFIG?.slug||'monti');
-const STORE='menu-demo-v6-'+SLUG;
-const legacy=storage.get('menu-demo-v4-1-'+SLUG,{})||{};
+const SLUG=(window.MENU_LOCAL_CONFIG?.slug||'tumenu-demo');
+const STORE='menu-demo-v9-'+SLUG;
+const legacy={}; // La demo genérica no importa consumos ni precios de otro restaurante.
 const saved=storage.get(STORE,null)??{pricing:legacy.pricing||{},sold:legacy.sold||{},stock:legacy.stock||{},cfg:legacy.cfg||window.MENU_LOCAL_CONFIG||{}};
-let cart=saved.cart||[],orders=saved.orders||[],sold=saved.sold||{},pricing=saved.pricing||{},stock=saved.stock||{},productPhotos=saved.productPhotos||{},sessions=saved.sessions||{},sessionHistory=saved.sessionHistory||{},tableAccess=saved.tableAccess||{},cfg=saved.cfg||window.MENU_LOCAL_CONFIG||{name:'Monti',subtitle:'Bar de pastas y café',theme:'terracotta',instagram:'',facebook:'',tiktok:'',googleReview:'',farewell:'Esperamos que hayas disfrutado tu visita. ¡Te esperamos pronto!'};
-cfg={name:'Monti',subtitle:'Bar de pastas y café',theme:'terracotta',instagram:'',facebook:'',tiktok:'',googleReview:'',farewell:'Esperamos que hayas disfrutado tu visita. ¡Te esperamos pronto!',...(window.MENU_LOCAL_CONFIG||{}),...cfg};
+let cart=saved.cart||[],orders=saved.orders||[],sold=saved.sold||{},pricing=saved.pricing||{},stock=saved.stock||{},productPhotos=saved.productPhotos||{},sessions=saved.sessions||{},sessionHistory=saved.sessionHistory||{},tableAccess=saved.tableAccess||{},cfg=saved.cfg||window.MENU_LOCAL_CONFIG||window.MENU_LOCAL_CONFIG||{};
+cfg={...(window.MENU_LOCAL_CONFIG||{}),...cfg};
 const genId=()=>globalThis.crypto?.randomUUID?.()||('id-'+Date.now()+'-'+Math.random().toString(36).slice(2));
 let clientId=storage.get(STORE+'-client',null);if(!clientId){clientId=genId();storage.put(STORE+'-client',clientId)}
 let seenFarewells=storage.get(STORE+'-seen',{});
@@ -2297,14 +1256,14 @@ function theme(){
  const p=activePalette(),root=document.documentElement;
  root.dataset.theme=cfg.theme;root.dataset.template=cfg.template||'clasica';
  root.style.setProperty('--accent',p.accent);root.style.setProperty('--ink',p.ink);root.style.setProperty('--soft',p.soft);root.style.setProperty('--accent-dark',mixColor(p.accent,'#11181a',.34));
- const isMonti=cfg.name.trim().toLowerCase()==='monti',hasLogo=true;
+ const hasLogo=true;
  $('logo').src=cfg.logoData||'branding/logo-horizontal.svg';$('logo').style.display=hasLogo?'block':'none';$('logo').alt=cfg.logoData?'Logo de '+cfg.name:'Tu Menú — Cartas digitales';
  document.querySelector('.brand-text').style.display=hasLogo?'none':'block';$('brand-name').textContent=cfg.name;$('brand-subtitle').textContent=cfg.subtitle;
  if($('splash-logo')){$('splash-logo').src=cfg.logoData||'branding/logo-horizontal.svg';$('splash-logo').hidden=!hasLogo;$('splash-name').hidden=hasLogo;$('splash-name').textContent=cfg.name}
- $('hero-eyebrow').textContent=isMonti?'Hecho con amor · Pasta fresca':'Bienvenidos a '+cfg.name;
- $('hero-heading').innerHTML=isMonti?'La buena pasta<br>se disfruta.':'Momentos ricos,<br>a tu manera.';
- $('hero-intro').textContent=isMonti?'Elegí lo que más te gusta, personalizá tu plato y hacé tu pedido sin esperar.':'Explorá nuestro menú, elegí lo que te gusta y pedí desde tu mesa sin esperar.';
- $('catalog-note').textContent=isMonti?'Precios y productos tomados de las cartas suministradas de Monti. Las fotos son ilustrativas; el menú debe verificarse antes de publicarse.':'Carta de demostración: se muestran productos de Monti hasta que cargues el catálogo del nuevo local.';
+ $('hero-eyebrow').textContent=cfg.heroEyebrow||'DESCUBRÍ · ELEGÍ · DISFRUTÁ';
+ $('hero-heading').textContent=cfg.heroTitle||'Todo lo que te gusta,\na un toque.';
+ $('hero-intro').textContent=cfg.heroDescription||'Explorá la carta, descubrí tus favoritos y hacé tu pedido de forma fácil y rápida.';
+ $('catalog-note').textContent='Catálogo ficticio de demostración. Productos y precios ilustrativos: no corresponden a ningún comercio real.';
  document.title=(cfg.logoData?cfg.name:'Tu Menú')+' · Menú interactivo';syncBrandIcons(cfg.logoData,p);$('footer-local').textContent=cfg.name+' · Demostración independiente. No es una carta oficial ni procesa pedidos o pagos reales.';
 }
 function suggestedPaletteFromLogo(img){
@@ -2326,6 +1285,9 @@ function renderBrandPreview(){
  preview.style.setProperty('--preview-accent',validHex(p.accent));preview.style.setProperty('--preview-ink',validHex(p.ink,'#302d2a'));preview.style.setProperty('--preview-soft',validHex(p.soft,'#f5ece5'));preview.dataset.variant=draftBrand.template||'clasica';
  let pic=$('brand-preview-logo');if(draftBrand.logoData){pic.src=draftBrand.logoData;pic.hidden=false}else{pic.src='branding/logo-horizontal.svg';pic.hidden=false}
  $('brand-preview-title').textContent=name;$('brand-preview-sub').textContent=sub;
+ if($('brand-preview-eyebrow'))$('brand-preview-eyebrow').textContent=$('cfg-hero-eyebrow')?.value||'DESCUBRÍ · ELEGÍ · DISFRUTÁ';
+ if($('brand-preview-headline'))$('brand-preview-headline').textContent=$('cfg-hero-title')?.value||'Todo lo que te gusta, a un toque.';
+ if($('brand-preview-description'))$('brand-preview-description').textContent=$('cfg-hero-desc')?.value||'Explorá la carta y descubrí tus favoritos.';
  document.querySelectorAll('[data-brand-template]').forEach(b=>{b.classList.toggle('active',b.dataset.brandTemplate===draftBrand.template);b.setAttribute('aria-pressed',String(b.dataset.brandTemplate===draftBrand.template))});
 }
 function setDraftPalette(p){draftBrand.palette={accent:validHex(p.accent),ink:validHex(p.ink,'#302d2a'),soft:validHex(p.soft,'#f5ece5')};
@@ -2343,16 +1305,22 @@ async function processLogoFile(file){
 }
 function toast(t){let el=$('toast');el.textContent=t;el.classList.add('on');clearTimeout(el._timer);el._timer=setTimeout(()=>el.classList.remove('on'),2500)}
 function placeholderIllustration(p){
- const c=String(p.cat||'').toLowerCase(),n=String(p.name||'').toLowerCase();
+ const text=(String(p.cat||'')+' '+String(p.name||'')).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
  let type='dish';
- if(/postre|torta|choco|tiramis|flan|medialuna|pasteler/.test(c+' '+n))type='cake';
- else if(/cafe|cafeter|capuccino|té|mate|infusi|submarino|frapp/.test(c+' '+n))type='coffee';
- else if(/bebida|limonad|licuad|vino|agua|jugo|gaseosa|smooth|cerveza/.test(c+' '+n))type='drink';
- else if(/pasta|raviol|ñoqui|spaghett|fusilli|lasaña|lasagna|salsa/.test(c+' '+n))type='pasta';
- else if(/focacci|tostad|sandwich|pan/.test(c+' '+n))type='bread';
+ if(/postre|dulces|torta|brownie|cookie|flan|pasteler/.test(text))type='cake';
+ else if(/hamburguesa|bagel/.test(text))type='burger';
+ else if(/pizza/.test(text))type='pizza';
+ else if(/ensalada|bowl|wok|verduras|veggie/.test(text))type='salad';
+ else if(/(?:^|\W)(?:cafe|cafeteria|cappuccino|espresso|latte|chai|te|mate)(?:\W|$)|infusion/.test(text))type='coffee';
+ else if(/bebidas|limonada|licuado|vino|agua|jugo|gaseosa|smooth|cerveza/.test(text))type='drink';
+ else if(/pasta|raviol|noqui|spaghetti|fusilli|lasana|salsa/.test(text))type='pasta';
+ else if(/bruschetta|empanada|focaccia|tostad|sandwich|wrap|pan/.test(text))type='bread';
  const art={
   dish:'<ellipse cx="48" cy="62" rx="31" ry="11"/><path d="M20 56c2-19 13-30 28-30s27 11 28 30Z"/><path d="M13 65h70M48 17v8"/><circle cx="48" cy="14" r="3"/>',
-  pasta:'<ellipse cx="48" cy="63" rx="33" ry="13"/><path d="M18 51c7 8 16 12 30 12s25-4 30-12M22 48c8-10 16-4 19 1 4-7 11-10 17-2 5-6 11-6 16 1"/><path d="M30 47q-3-11 10-13 10-3 12 7M54 38q15-11 20 2"/>',
+  pasta:'<ellipse cx="48" cy="63" rx="33" ry="13"/><path d="M18 51c7 8 16 12 30 12s25-4 30-12M22 48c8-10 16-4 19 1 4-7 11-6 16 1"/><path d="M30 47q-3-11 10-13 10-3 12 7M54 38q15-11 20 2"/>',
+  burger:'<path d="M16 51c2-20 14-30 32-30s30 10 32 30Z"/><path d="M14 54h68M17 64h62M19 74h58Q76 83 65 83H29Q18 83 19 74Z"/><path d="M20 60q11 10 21 0t20 0 16 0"/><path d="M34 39h2M49 32h2M64 41h2" stroke-linecap="round" stroke-width="4"/>',
+  pizza:'<path d="M16 24Q52 6 82 24L50 83Z"/><path d="M16 24Q51 13 82 24M24 38Q52 28 74 38"/><circle cx="45" cy="48" r="6"/><circle cx="61" cy="37" r="5"/><circle cx="49" cy="66" r="4"/>',
+  salad:'<path d="M15 55h66Q76 84 48 84T15 55Z"/><path d="M22 55q-15-25 6-27 2-17 18-11 16-19 27 4 21 3 5 34"/><path d="M32 26q8 17 16 29M64 20q-8 18-13 35M27 43q11 2 21 12M71 37q-13 4-23 18"/>',
   coffee:'<path d="M19 39h51v29q-2 12-25 12-24 0-26-12Z"/><path d="M70 44h7q16 0 12 15-3 11-19 10M16 83h62"/><path d="M34 16q-7 8 1 14M51 14q-7 8 1 14M65 17q-7 8 1 14"/>',
   drink:'<path d="M27 29h41l-5 53H33Z"/><path d="M23 30h50M43 15l13 13M57 14l6 4"/><path d="M30 53q17 7 35 0"/><circle cx="47" cy="68" r="5"/>',
   cake:'<path d="M18 72 50 32 79 72Z"/><path d="M18 72h61v11H18Z"/><path d="M26 62h45M35 51h28M50 32q-8-7 1-12 10-2 9-9"/><circle cx="49" cy="27" r="4"/>',
@@ -2365,7 +1333,7 @@ function pic(p){
  const url=typeof productPhotos[p.id]==='string'&&productPhotos[p.id].startsWith('data:image/')?productPhotos[p.id]:'';
  return `<div class="dishpic ${url?'is-loading':'no-photo'}">${url?`<img loading="lazy" src="${esc(url)}" alt="Fotografía de ${esc(p.name)}" onload="this.parentNode.classList.remove('is-loading');this.parentNode.classList.add('has-photo')" onerror="this.parentNode.classList.remove('is-loading');this.remove()">`:''}${fallback}</div>`;
 }
-function catOrder(){return {resto:['Pastas','Especiales','Entradas','Lasagnas','Milanesas','Ensaladas','Focacci','Menú semanal','Menú kids','Postres','Bebidas','Con alcohol','Vinos'],cafe:['Para tomar','Combos','Para comer','Fríos y licuados','Para compartir','Tortas'],casa:['Pastas frescas','Ravioles','Salsas','Extras']}[service]}
+function catOrder(){return [...new Set(data.filter(p=>p.sec===service).map(p=>p.cat))]}
 function drawFilters(){let categories=['Todos',...catOrder()];$('chips').innerHTML=categories.map(c=>`<button data-cat="${esc(c)}" class="${category===c?'active':''}">${esc(c)}</button>`).join('');$('service-tabs').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.service===service));}
 function drawProducts(){let arr=data.filter(p=>p.sec===service);
 arr=arr.filter(p=>category==='Todos'||p.cat===category).filter(p=>(p.name+' '+p.desc+' '+p.cat).toLocaleLowerCase('es').includes(search.toLocaleLowerCase('es')));
@@ -2398,7 +1366,7 @@ let num=String(Math.max(0,...orders.map(o=>Number(o.number)||0))+1).padStart(3,'
 for(const [id,q] of Object.entries(required)){if(stock[id]!=null)stock[id]=Math.max(0,Number(stock[id])-q)}
 orders.unshift(order);lastOrder=order;cart=[];mesa=t;persist();$('table-badge').textContent='Mesa '+mesa;$('side-table').textContent='Mesa '+mesa;drawCart();drawProducts();drawCustomerTracker();orderSuccess(order);}
 function menuScroll(dessert=false){
- if(dessert){service='resto';category='Postres';search='';$('search').value='';drawFilters();drawProducts();}
+ if(dessert){const sweets={resto:'Postres',cafe:'Dulces',casa:'Dulces para llevar'};category=sweets[service]||'Postres';search='';$('search').value='';drawFilters();drawProducts();}
  else{category='Todos';search='';$('search').value='';drawFilters();drawProducts();}
  closeDialog();let target=dessert?$('products'):document.querySelector('.sectiontop');
  target?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
@@ -2418,7 +1386,7 @@ function dashboardData(){
  return {count:daily.length,active:activeSessions().length,paid,average:paidVisits.length?paid/paidVisits.length:0,sectors:sector,top:[...top].sort((a,b)=>b[1]-a[1]).slice(0,4),recent:daily.slice(0,5),paidCount:paidVisits.length};
 }
 function drawDashboard(){
- const sample=dashboardSample,real=dashboardData(),d=sample?{count:18,active:4,paid:286300,average:40900,sectors:{resto:162000,cafe:86500,casa:37800},top:[['Ravioles',9],['Café doble',8],['Ñoquis',6],['Tiramisú',5]],recent:[],paidCount:7}:real;
+ const sample=dashboardSample,real=dashboardData(),d=sample?{count:18,active:4,paid:286300,average:40900,sectors:{resto:162000,cafe:86500,casa:37800},top:[['Hamburguesa de la casa',9],['Cappuccino',8],['Brownie con helado',6],['Limonada clásica',5]],recent:[],paidCount:7}:real;
  const names={resto:'Restaurante',cafe:'Cafetería',casa:'Para llevar'},colors=['var(--accent)','#789b88','#d7b28b'];
  const vals=Object.values(d.sectors),grand=vals.reduce((a,b)=>a+b,0);let cum=0;let stops=vals.map((v,i)=>{let from=cum;cum+=grand?v/grand*100:0;return `${colors[i]} ${from.toFixed(2)}% ${cum.toFixed(2)}%`});
  const gradient=grand?`conic-gradient(${stops.join(',')})`:'conic-gradient(#e9e2da 0 100%)';
@@ -2435,12 +1403,13 @@ function brandSettingsHTML(){
  draftBrand={logoData:cfg.logoData||'',palette:{...p},template:cfg.template||'clasica'};
  return `<div class="admin-card identity-card"><div class="identity-title"><div><span class="eyebrow">IDENTIDAD VISUAL AUTOMÁTICA</span><h3>Tu marca, tu menú</h3><p class="field-note">Subí el logo del local: la demo detecta sus colores y te propone una plantilla. Podés modificar todo antes de guardar.</p></div><span class="pill ok">Personalizable</span></div>
  <div class="identity-grid"><div class="identity-controls"><div class="identity-filebox"><div class="identity-file-icon"><svg><use href="#i-upload"/></svg></div><div><b>Subí el logo del negocio</b><small>JPG, PNG o WebP · Máximo 5 MB</small></div><label for="cfg-logo-file" class="identity-upload">Elegir imagen<input id="cfg-logo-file" type="file" accept="image/jpeg,image/png,image/webp" hidden></label></div>
- <div class="admin-form identity-general"><label>Nombre del local<input id="cfg-name" maxlength="40" value="${esc(cfg.name)}"></label><label>Tipo de negocio<select id="cfg-business-type"><option value="restaurant" ${(cfg.businessType||'restaurant')==='restaurant'?'selected':''}>Restaurante</option><option value="cafe" ${cfg.businessType==='cafe'?'selected':''}>Cafetería</option><option value="bar" ${cfg.businessType==='bar'?'selected':''}>Bar</option><option value="other" ${cfg.businessType==='other'?'selected':''}>Otro local</option></select></label><label>Subtítulo<input id="cfg-sub" maxlength="65" value="${esc(cfg.subtitle)}"></label><label>Paleta de referencia<select id="cfg-theme"><option value="terracotta" ${cfg.theme==='terracotta'?'selected':''}>Terracota · Monti</option><option value="olive" ${cfg.theme==='olive'?'selected':''}>Oliva</option><option value="ocean" ${cfg.theme==='ocean'?'selected':''}>Azul</option><option value="custom" ${cfg.theme==='custom'?'selected':''}>Colores personalizados</option></select></label></div>
+ <div class="admin-form identity-general"><label>Nombre del local<input id="cfg-name" maxlength="40" value="${esc(cfg.name)}"></label><label>Tipo de negocio<select id="cfg-business-type"><option value="restaurant" ${(cfg.businessType||'restaurant')==='restaurant'?'selected':''}>Restaurante</option><option value="cafe" ${cfg.businessType==='cafe'?'selected':''}>Cafetería</option><option value="bar" ${cfg.businessType==='bar'?'selected':''}>Bar</option><option value="other" ${cfg.businessType==='other'?'selected':''}>Otro local</option></select></label><label>Subtítulo<input id="cfg-sub" maxlength="65" value="${esc(cfg.subtitle)}"></label><label>Paleta de referencia<select id="cfg-theme"><option value="terracotta" ${cfg.theme==='terracotta'?'selected':''}>Terracota</option><option value="olive" ${cfg.theme==='olive'?'selected':''}>Oliva</option><option value="ocean" ${cfg.theme==='ocean'?'selected':''}>Azul</option><option value="custom" ${cfg.theme==='custom'?'selected':''}>Colores personalizados</option></select></label></div>
+ <div class="admin-form identity-copy"><label>Frase superior<input id="cfg-hero-eyebrow" maxlength="65" value="${esc(cfg.heroEyebrow||'DESCUBRÍ · ELEGÍ · DISFRUTÁ')}"></label><label>Título principal<textarea id="cfg-hero-title" rows="2" maxlength="90">${esc(cfg.heroTitle||'Todo lo que te gusta,\n a un toque.')}</textarea></label><label>Descripción breve<textarea id="cfg-hero-desc" rows="3" maxlength="200">${esc(cfg.heroDescription||'Explorá la carta, descubrí tus favoritos y hacé tu pedido de forma fácil y rápida.')}</textarea></label></div>
  <div class="identity-colors"><label><input type="color" id="cfg-color-accent" value="${validHex(p.accent)}"><span>Color principal</span></label><label><input type="color" id="cfg-color-ink" value="${validHex(p.ink,'#33241d')}"><span>Textos</span></label><label><input type="color" id="cfg-color-soft" value="${validHex(p.soft,'#f6e8dd')}"><span>Fondo suave</span></label></div>
  <div class="identity-helper">Los colores se calculan en tu navegador, sin IA paga y sin subir el logo a ningún servidor. Podés corregirlos manualmente.</div></div>
- <div class="identity-preview-column"><div class="identity-preview-label"><b>Vista previa del menú</b><span>Antes de publicar</span></div><div class="brand-preview" id="brand-preview" data-variant="${esc(draftBrand.template)}"><div class="brand-preview-top"><img id="brand-preview-logo" alt="Logo del local" src="${cfg.logoData?esc(cfg.logoData):'branding/logo-horizontal.svg'}"><div class="brand-preview-lines"><b id="brand-preview-title">${esc(cfg.name)}</b><small id="brand-preview-sub">${esc(cfg.subtitle)}</small></div><i class="brand-preview-menu"><svg><use href="#i-bag"/></svg></i></div><div class="brand-preview-banner"><span>NUESTRA CARTA</span><b>Un momento para disfrutar.</b><small>Elegí tus favoritos y pedí desde tu mesa.</small></div><div class="brand-preview-card"><span class="brand-preview-dish"></span><div><b>Tu próxima elección</b><small>Preparado especialmente para vos</small><span class="brand-preview-price">$8.500</span></div><i>+</i></div><div class="brand-preview-card"><span class="brand-preview-dish alt"></span><div><b>Algo para acompañar</b><small>Descubrí más opciones</small><span class="brand-preview-price">$5.000</span></div><i>+</i></div></div><span class="identity-preview-footnote">Ejemplo de diseño. Los productos del catálogo siguen siendo los de Monti hasta cargar otra carta.</span></div></div>
+ <div class="identity-preview-column"><div class="identity-preview-label"><b>Vista previa del menú</b><span>Antes de publicar</span></div><div class="brand-preview" id="brand-preview" data-variant="${esc(draftBrand.template)}"><div class="brand-preview-top"><img id="brand-preview-logo" alt="Logo del local" src="${cfg.logoData?esc(cfg.logoData):'branding/logo-horizontal.svg'}"><div class="brand-preview-lines"><b id="brand-preview-title">${esc(cfg.name)}</b><small id="brand-preview-sub">${esc(cfg.subtitle)}</small></div><i class="brand-preview-menu"><svg><use href="#i-bag"/></svg></i></div><div class="brand-preview-banner"><span id="brand-preview-eyebrow">${esc(cfg.heroEyebrow||'DESCUBRÍ · ELEGÍ · DISFRUTÁ')}</span><b id="brand-preview-headline">${esc(cfg.heroTitle||'Todo lo que te gusta, a un toque.')}</b><small id="brand-preview-description">${esc(cfg.heroDescription||'Explorá la carta y descubrí tus favoritos.')}</small></div><div class="brand-preview-card"><span class="brand-preview-dish"></span><div><b>Tu próxima elección</b><small>Preparado especialmente para vos</small><span class="brand-preview-price">$8.500</span></div><i>+</i></div><div class="brand-preview-card"><span class="brand-preview-dish alt"></span><div><b>Algo para acompañar</b><small>Descubrí más opciones</small><span class="brand-preview-price">$5.000</span></div><i>+</i></div></div><span class="identity-preview-footnote">Ejemplo de diseño con productos y precios ficticios. Reemplazalos por los de cada local.</span></div></div>
  <div class="identity-templates"><div><b>Elegí una plantilla</b><small>Las tres usan la misma estructura de pedidos.</small></div><div class="template-choices"><button type="button" class="template-choice" data-brand-template="clasica"><span class="template-mock clasica"><i></i><em></em><small></small></span><b>Clásica</b><small>Equilibrada</small></button><button type="button" class="template-choice" data-brand-template="calida"><span class="template-mock calida"><i></i><em></em><small></small></span><b>Cálida</b><small>Más orgánica</small></button><button type="button" class="template-choice" data-brand-template="minimal"><span class="template-mock minimal"><i></i><em></em><small></small></span><b>Minimalista</b><small>Más limpia</small></button></div></div>
- <div class="identity-save-actions"><button class="primary" id="cfg-save">Aplicar diseño al menú</button><button class="secondary" id="cfg-retry">Probar otra plantilla</button><button class="secondary" id="cfg-logo-clear">Quitar logo cargado</button><button class="secondary" id="cfg-style-reset">Restaurar diseño Monti</button></div></div>`;
+ <div class="identity-save-actions"><button class="primary" id="cfg-save">Aplicar diseño al menú</button><button class="secondary" id="cfg-retry">Probar otra plantilla</button><button class="secondary" id="cfg-logo-clear">Quitar logo cargado</button><button class="secondary" id="cfg-style-reset">Restaurar diseño Tu Menú</button></div></div>`;
 }
 function roomTableNumbers(){
  const list=new Set(Array.from({length:tableCapacity()},(_,i)=>String(i+1)));
@@ -2468,11 +1437,11 @@ function kitchenPreview(orderId){
  showDialog('Comanda · Mesa '+o.table,`<p class="field-note">Vista de cocina: cantidades, variantes y observaciones. Imprimí solamente el pedido nuevo, no la cuenta acumulada.</p><div class="kitchen-paper ${kitchenPaperWidth()==='58'?'print-58':''}">${kitchenTicketBody(o)}</div><button type="button" class="primary full" data-do-kitchen-print="${esc(o.id)}">Abrir impresión (${kitchenPaperWidth()} mm)</button><p class="field-note">El navegador abrirá el diálogo para elegir tu ticketera. No se cobra ni se factura.</p>`,true);
 }
 function kitchenDemoPreview(){
- const o={id:'demo',number:'EJEMPLO',table:'03',created:new Date().toISOString(),status:'recibido',items:[{name:'Ravioles',qty:2,choices:['Salsa rosa','Relleno ricota']},{name:'Limonada',qty:1,choices:[]}],note:'Sin sal. Una porción para compartir.'};
+ const o={id:'demo',number:'EJEMPLO',table:'03',created:new Date().toISOString(),status:'recibido',items:[{name:'Hamburguesa de la casa',qty:2,choices:['Papas rústicas','Queso extra']},{name:'Limonada clásica',qty:1,choices:[]}],note:'Sin cebolla en una hamburguesa.'};
  showDialog('Comanda de ejemplo',`<p class="field-note">Esto es solo una prueba de impresión. No genera pedidos ni modifica el stock.</p><div class="kitchen-paper ${kitchenPaperWidth()==='58'?'print-58':''}">${kitchenTicketBody(o)}</div><button type="button" class="primary full" data-do-kitchen-print="demo">Imprimir ejemplo (${kitchenPaperWidth()} mm)</button>`,true);
 }
 function kitchenPrint(orderId){
- const o=orderId==='demo'?{id:'demo',number:'EJEMPLO',table:'03',created:new Date().toISOString(),status:'recibido',items:[{name:'Ravioles',qty:2,choices:['Salsa rosa','Relleno ricota']},{name:'Limonada',qty:1,choices:[]}],note:'Sin sal. Una porción para compartir.'}:orders.find(x=>x.id===orderId);
+ const o=orderId==='demo'?{id:'demo',number:'EJEMPLO',table:'03',created:new Date().toISOString(),status:'recibido',items:[{name:'Hamburguesa de la casa',qty:2,choices:['Papas rústicas','Queso extra']},{name:'Limonada clásica',qty:1,choices:[]}],note:'Sin cebolla en una hamburguesa.'}:orders.find(x=>x.id===orderId);
  if(!o){toast('Pedido no encontrado');return}
  const width=kitchenPaperWidth(),win=window.open('','_blank','width=410,height=700');
  if(!win){toast('Habilitá las ventanas emergentes para imprimir');return}
@@ -2552,11 +1521,12 @@ function adminAction(t){
  if(t.dataset.brandTemplate){draftBrand.template=t.dataset.brandTemplate;renderBrandPreview();return}
  if(t.id==='cfg-retry'){let choices=['clasica','calida','minimal'];draftBrand.template=choices[(choices.indexOf(draftBrand.template)+1)%choices.length];renderBrandPreview();toast('Probá otra plantilla antes de guardar');return}
  if(t.id==='cfg-logo-clear'){draftBrand.logoData='';renderBrandPreview();toast('Logo retirado de la vista previa. Guardá para aplicar.');return}
- if(t.id==='cfg-style-reset'){cfg.name='Monti';cfg.subtitle='Bar de pastas y café';cfg.theme='terracotta';cfg.template='clasica';cfg.businessType='restaurant';cfg.logoData='';cfg.palette=null;theme();persist();drawAdmin();toast('Identidad de Monti restaurada, sin borrar pedidos');return}
+ if(t.id==='cfg-style-reset'){Object.assign(cfg,{name:'Tu Menú',subtitle:'Cartas digitales interactivas',theme:'terracotta',template:'clasica',businessType:'restaurant',logoData:'',palette:null,heroEyebrow:'DESCUBRÍ · ELEGÍ · DISFRUTÁ',heroTitle:'Todo lo que te gusta,\na un toque.',heroDescription:'Explorá la carta, descubrí tus favoritos y hacé tu pedido de forma fácil y rápida.'});theme();persist();drawAdmin();toast('Identidad inicial de Tu Menú restaurada, sin borrar pedidos');return}
  if(t.id==='cfg-save'){
  let raw={instagram:$('cfg-instagram').value.trim(),facebook:$('cfg-facebook').value.trim(),tiktok:$('cfg-tiktok').value.trim(),googleReview:$('cfg-google').value.trim()};
  if(Object.values(raw).some(v=>v&&!safeUrl(v))){toast('Usá enlaces HTTPS válidos para las redes y Google');return}
  cfg.name=$('cfg-name').value.trim()||'Mi local';cfg.subtitle=$('cfg-sub').value.trim();cfg.businessType=$('cfg-business-type').value;
+ cfg.heroEyebrow=$('cfg-hero-eyebrow').value.trim()||'DESCUBRÍ · ELEGÍ · DISFRUTÁ';cfg.heroTitle=$('cfg-hero-title').value.trim()||'Todo lo que te gusta, a un toque.';cfg.heroDescription=$('cfg-hero-desc').value.trim()||'Explorá la carta, descubrí tus favoritos y hacé tu pedido de forma fácil y rápida.';
  cfg.theme=$('cfg-theme').value;cfg.palette={accent:validHex($('cfg-color-accent').value),ink:validHex($('cfg-color-ink').value,'#33241d'),soft:validHex($('cfg-color-soft').value,'#f6e8dd')};
  cfg.logoData=draftBrand.logoData;cfg.template=draftBrand.template;cfg.farewell=$('cfg-farewell').value.trim()||'¡Te esperamos pronto!';Object.assign(cfg,raw);
  theme();persist();drawAdmin();toast('Identidad visual guardada en esta demo');return;
@@ -2571,8 +1541,8 @@ let start=Math.max(1,Math.min(999,Math.round(Number($('qr-start').value)||1))),a
 let cards=[];for(let i=0;i<amount;i++){let n=start+i,url=new URL(base.href);url.searchParams.set('mesa',String(n));let u=url.toString();let svg=makeQrSvg(u);cards.push('<div class="monti-qrcard"><div class="qrcode">'+svg+'</div><strong>Mesa '+n+'</strong><span style="display:block;font-size:11px;color:#987d6f">Escaneá para ver nuestra carta</span><small>'+esc(u)+'</small><button class="secondary" data-qr-download="'+n+'">Descargar SVG</button></div>')}
 root.innerHTML=cards.join('');$('monti-qr-sheet').innerHTML=cards.join('');print.disabled=false;
 let local=/^(localhost|127\.0\.0\.1)$/.test(base.hostname)||base.protocol!=='https:';message.innerHTML='<div class="monti-feedback">✓ '+amount+' código(s) generados. Cada QR lleva a su mesa.</div>'+(local?'<div class="monti-qrhelp">Atención: esa URL no parece una web pública con HTTPS. Comprobá que sea accesible desde otro celular antes de imprimir.</div>':'<p class="monti-subtitle">Probá escanear uno desde el celular antes de distribuirlo.</p>');}
-function downloadSvg(n){let base=publicMenuUrl();if(!base)return;let url=new URL(base.href);url.searchParams.set('mesa',String(n));let svg=makeQrSvg(url.toString());let blob=new Blob([svg],{type:'image/svg+xml;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Monti_Mesa_'+n+'.svg';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);}
-function howItWorks(){showDialog('Tu menú, sin PDF',`<div class="monti-welcome"><p style="font-size:13px;color:var(--muted);line-height:1.65;margin:0">Así funciona la experiencia de una carta digital interactiva:</p><div class="monti-welcome-step"><span>1</span><div><b>Explorá la carta.</b><br>Elegí Restaurante, Cafetería o Para llevar.</div></div><div class="monti-welcome-step"><span>2</span><div><b>Personalizá tus platos.</b><br>Seleccioná salsa, relleno y agregados.</div></div><div class="monti-welcome-step"><span>3</span><div><b>Enviá tu pedido.</b><br>El pedido aparece automáticamente en mostrador.</div></div><div class="monti-welcome-step"><span>⌗</span><div><b>Un QR por mesa.</b><br>Podés prepararlos desde Vista negocio → Personalización.</div></div><p style="font-size:11px;color:#997568">Versión de demostración local, sin cobros ni pedidos reales.</p><button class="primary full" id="how-close">¡Entendido, quiero explorar! →</button></div>`)}
+function downloadSvg(n){let base=publicMenuUrl();if(!base)return;let url=new URL(base.href);url.searchParams.set('mesa',String(n));let svg=makeQrSvg(url.toString());let blob=new Blob([svg],{type:'image/svg+xml;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='TuMenu_Mesa_'+n+'.svg';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);}
+function howItWorks(){showDialog('Tu menú, sin PDF',`<div class="monti-welcome"><p style="font-size:13px;color:var(--muted);line-height:1.65;margin:0">Así funciona la experiencia de una carta digital interactiva:</p><div class="monti-welcome-step"><span>1</span><div><b>Explorá la carta.</b><br>Elegí Restaurante, Cafetería o Para llevar.</div></div><div class="monti-welcome-step"><span>2</span><div><b>Personalizá tus platos.</b><br>Elegí tamaños, acompañamientos y agregados.</div></div><div class="monti-welcome-step"><span>3</span><div><b>Enviá tu pedido.</b><br>El pedido aparece automáticamente en mostrador.</div></div><div class="monti-welcome-step"><span>⌗</span><div><b>Un QR por mesa.</b><br>Podés prepararlos desde Vista negocio → Personalización.</div></div><p style="font-size:11px;color:#997568">Versión de demostración local, sin cobros ni pedidos reales.</p><button class="primary full" id="how-close">¡Entendido, quiero explorar! →</button></div>`)}
 
 function onClick(e){let t=e.target.closest('button');if(!t)return;
 if(t.dataset.printOrder){kitchenPreview(t.dataset.printOrder);return}
@@ -2647,7 +1617,7 @@ document.addEventListener('input',e=>{
  if(['cfg-color-accent','cfg-color-ink','cfg-color-soft'].includes(e.target.id)){
   let p={accent:$('cfg-color-accent').value,ink:$('cfg-color-ink').value,soft:$('cfg-color-soft').value};setDraftPalette(p);
  }
- if(['cfg-name','cfg-sub'].includes(e.target.id))renderBrandPreview();
+ if(['cfg-name','cfg-sub','cfg-hero-eyebrow','cfg-hero-title','cfg-hero-desc'].includes(e.target.id))renderBrandPreview();
 });
 document.addEventListener('change',e=>{if(e.target.id==='kitchen-paper-width'){cfg.kitchenPaperWidth=e.target.value==='58'?'58':'80';persist();toast('Ancho de comanda guardado');return}if(e.target.id==='cfg-theme'){
  const val=e.target.value;

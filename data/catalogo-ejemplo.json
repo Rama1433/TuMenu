@@ -1,0 +1,748 @@
+[
+  {
+    "id": "demo-bruschettas",
+    "sec": "resto",
+    "cat": "Entradas",
+    "name": "Bruschettas de tomate",
+    "price": 7900,
+    "desc": "Tostadas con tomate fresco y albahaca.",
+    "photo": "",
+    "tag": "Vegetariano",
+    "opts": []
+  },
+  {
+    "id": "demo-papas-rusticas",
+    "sec": "resto",
+    "cat": "Entradas",
+    "name": "Papas rústicas",
+    "price": 9800,
+    "desc": "Papas al horno con dip casero.",
+    "photo": "",
+    "tag": "Para compartir",
+    "opts": [
+      {
+        "key": "dip",
+        "label": "Elegí un dip",
+        "multi": false,
+        "options": [
+          {
+            "name": "Alioli",
+            "price": 0
+          },
+          {
+            "name": "Salsa de yogur",
+            "price": 0
+          },
+          {
+            "name": "Salsa picante",
+            "price": 500
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-empanadas",
+    "sec": "resto",
+    "cat": "Entradas",
+    "name": "Empanadas artesanales",
+    "price": 7500,
+    "desc": "Porción de dos unidades.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "relleno",
+        "label": "Elegí el relleno",
+        "multi": false,
+        "options": [
+          {
+            "name": "Carne suave",
+            "price": 0
+          },
+          {
+            "name": "Pollo",
+            "price": 0
+          },
+          {
+            "name": "Verduras",
+            "price": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-hamburguesa",
+    "sec": "resto",
+    "cat": "Platos principales",
+    "name": "Hamburguesa de la casa",
+    "price": 17800,
+    "desc": "Medallón con vegetales y pan artesanal.",
+    "photo": "",
+    "tag": "Popular",
+    "opts": [
+      {
+        "key": "acompanamiento",
+        "label": "Elegí un acompañamiento",
+        "multi": false,
+        "options": [
+          {
+            "name": "Papas rústicas",
+            "price": 0
+          },
+          {
+            "name": "Ensalada",
+            "price": 0
+          },
+          {
+            "name": "Vegetales asados",
+            "price": 0
+          }
+        ]
+      },
+      {
+        "key": "agregados",
+        "label": "¿Querés agregar algo?",
+        "multi": true,
+        "options": [
+          {
+            "name": "Queso extra",
+            "price": 1200
+          },
+          {
+            "name": "Salsa extra",
+            "price": 1500
+          },
+          {
+            "name": "Papas adicionales",
+            "price": 2600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-pollo",
+    "sec": "resto",
+    "cat": "Platos principales",
+    "name": "Pollo grillado",
+    "price": 17500,
+    "desc": "Pechuga grillada con guarnición a elección.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "acompanamiento",
+        "label": "Elegí un acompañamiento",
+        "multi": false,
+        "options": [
+          {
+            "name": "Papas rústicas",
+            "price": 0
+          },
+          {
+            "name": "Ensalada",
+            "price": 0
+          },
+          {
+            "name": "Vegetales asados",
+            "price": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-pizza",
+    "sec": "resto",
+    "cat": "Platos principales",
+    "name": "Pizza de mozzarella",
+    "price": 18600,
+    "desc": "Pizza grande con salsa de tomate y mozzarella.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "agregados",
+        "label": "Agregados",
+        "multi": true,
+        "options": [
+          {
+            "name": "Tomate",
+            "price": 900
+          },
+          {
+            "name": "Aceitunas",
+            "price": 800
+          },
+          {
+            "name": "Rúcula",
+            "price": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-sandwich-bondiola",
+    "sec": "resto",
+    "cat": "Platos principales",
+    "name": "Sándwich de cerdo braseado",
+    "price": 18200,
+    "desc": "Cerdo desmechado, vegetales y pan tostado.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-wok",
+    "sec": "resto",
+    "cat": "Platos principales",
+    "name": "Wok de vegetales",
+    "price": 16200,
+    "desc": "Salteado de vegetales frescos y arroz.",
+    "photo": "",
+    "tag": "Vegano",
+    "opts": []
+  },
+  {
+    "id": "demo-bowl",
+    "sec": "resto",
+    "cat": "Opciones veggie",
+    "name": "Bowl mediterráneo",
+    "price": 15900,
+    "desc": "Arroz, vegetales, hummus y semillas.",
+    "photo": "",
+    "tag": "Vegano",
+    "opts": []
+  },
+  {
+    "id": "demo-tarta",
+    "sec": "resto",
+    "cat": "Opciones veggie",
+    "name": "Tarta de verduras",
+    "price": 14200,
+    "desc": "Tarta casera con ensalada de estación.",
+    "photo": "",
+    "tag": "Vegetariano",
+    "opts": []
+  },
+  {
+    "id": "demo-brownie",
+    "sec": "resto",
+    "cat": "Postres",
+    "name": "Brownie con helado",
+    "price": 9200,
+    "desc": "Brownie tibio y una bocha de helado.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "sabor",
+        "label": "Elegí el sabor",
+        "multi": false,
+        "options": [
+          {
+            "name": "Crema",
+            "price": 0
+          },
+          {
+            "name": "Chocolate",
+            "price": 0
+          },
+          {
+            "name": "Frutilla",
+            "price": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-flan",
+    "sec": "resto",
+    "cat": "Postres",
+    "name": "Flan casero",
+    "price": 7800,
+    "desc": "Flan de vainilla con caramelo.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "agregado",
+        "label": "Agregado",
+        "multi": true,
+        "options": [
+          {
+            "name": "Dulce de leche",
+            "price": 700
+          },
+          {
+            "name": "Crema",
+            "price": 700
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-frutas",
+    "sec": "resto",
+    "cat": "Postres",
+    "name": "Copa de frutas",
+    "price": 7600,
+    "desc": "Frutas de estación servidas frescas.",
+    "photo": "",
+    "tag": "Vegano",
+    "opts": []
+  },
+  {
+    "id": "demo-limonada",
+    "sec": "resto",
+    "cat": "Bebidas",
+    "name": "Limonada clásica",
+    "price": 5500,
+    "desc": "Limón exprimido, agua y hielo.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-agua",
+    "sec": "resto",
+    "cat": "Bebidas",
+    "name": "Agua mineral",
+    "price": 3800,
+    "desc": "Botella individual.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "tipo",
+        "label": "Elegí una opción",
+        "multi": false,
+        "options": [
+          {
+            "name": "Con gas",
+            "price": 0
+          },
+          {
+            "name": "Sin gas",
+            "price": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-espresso",
+    "sec": "cafe",
+    "cat": "Cafés",
+    "name": "Café espresso",
+    "price": 3700,
+    "desc": "Café corto de tueste medio.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-cappuccino",
+    "sec": "cafe",
+    "cat": "Cafés",
+    "name": "Cappuccino",
+    "price": 5600,
+    "desc": "Espresso, leche y espuma suave.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "tamano",
+        "label": "Elegí el tamaño",
+        "multi": false,
+        "options": [
+          {
+            "name": "Mediano",
+            "price": 0
+          },
+          {
+            "name": "Grande",
+            "price": 1300
+          }
+        ]
+      },
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-cafe-leche",
+    "sec": "cafe",
+    "cat": "Cafés",
+    "name": "Café con leche",
+    "price": 4900,
+    "desc": "Espresso con leche caliente.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "tamano",
+        "label": "Elegí el tamaño",
+        "multi": false,
+        "options": [
+          {
+            "name": "Mediano",
+            "price": 0
+          },
+          {
+            "name": "Grande",
+            "price": 1300
+          }
+        ]
+      },
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-te",
+    "sec": "cafe",
+    "cat": "Infusiones",
+    "name": "Té en hebras",
+    "price": 4500,
+    "desc": "Infusión con selección de variedades.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "te",
+        "label": "Variedad",
+        "multi": false,
+        "options": [
+          {
+            "name": "Negro",
+            "price": 0
+          },
+          {
+            "name": "Verde",
+            "price": 0
+          },
+          {
+            "name": "Frutos rojos",
+            "price": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-chai",
+    "sec": "cafe",
+    "cat": "Infusiones",
+    "name": "Chai latte",
+    "price": 6100,
+    "desc": "Bebida especiada con leche caliente.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-combo",
+    "sec": "cafe",
+    "cat": "Desayunos",
+    "name": "Combo café y tostadas",
+    "price": 9700,
+    "desc": "Bebida caliente y tostadas con queso crema.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-palta",
+    "sec": "cafe",
+    "cat": "Desayunos",
+    "name": "Tostada con palta",
+    "price": 11900,
+    "desc": "Pan de campo, palta y semillas.",
+    "photo": "",
+    "tag": "Vegetariano",
+    "opts": []
+  },
+  {
+    "id": "demo-tostado",
+    "sec": "cafe",
+    "cat": "Desayunos",
+    "name": "Tostado clásico",
+    "price": 9200,
+    "desc": "Pan dorado con jamón y queso.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-cookie",
+    "sec": "cafe",
+    "cat": "Dulces",
+    "name": "Cookie de chocolate",
+    "price": 4300,
+    "desc": "Galleta artesanal con chips de chocolate.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-torta",
+    "sec": "cafe",
+    "cat": "Dulces",
+    "name": "Porción de torta",
+    "price": 8400,
+    "desc": "Elegí entre las opciones del día.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "sabor",
+        "label": "Elegí el sabor",
+        "multi": false,
+        "options": [
+          {
+            "name": "Chocolate",
+            "price": 0
+          },
+          {
+            "name": "Vainilla",
+            "price": 0
+          },
+          {
+            "name": "Frutas",
+            "price": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-cafe-frio",
+    "sec": "cafe",
+    "cat": "Bebidas frías",
+    "name": "Café frío",
+    "price": 6300,
+    "desc": "Café suave servido con hielo.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-jugo",
+    "sec": "cafe",
+    "cat": "Bebidas frías",
+    "name": "Jugo exprimido",
+    "price": 5900,
+    "desc": "Jugo natural de naranja.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-bagel",
+    "sec": "casa",
+    "cat": "Comidas para llevar",
+    "name": "Bagel de pollo",
+    "price": 12100,
+    "desc": "Bagel con pollo, hojas verdes y aderezo.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-wrap",
+    "sec": "casa",
+    "cat": "Comidas para llevar",
+    "name": "Wrap vegetariano",
+    "price": 11200,
+    "desc": "Tortilla con vegetales, hummus y semillas.",
+    "photo": "",
+    "tag": "Vegetariano",
+    "opts": []
+  },
+  {
+    "id": "demo-sandwich",
+    "sec": "casa",
+    "cat": "Comidas para llevar",
+    "name": "Sándwich de queso",
+    "price": 10800,
+    "desc": "Pan artesanal, quesos y tomates.",
+    "photo": "",
+    "tag": "Vegetariano",
+    "opts": []
+  },
+  {
+    "id": "demo-ensalada",
+    "sec": "casa",
+    "cat": "Comidas para llevar",
+    "name": "Ensalada en bowl",
+    "price": 12900,
+    "desc": "Vegetales frescos y aderezo aparte.",
+    "photo": "",
+    "tag": "Vegano",
+    "opts": []
+  },
+  {
+    "id": "demo-iced-latte",
+    "sec": "casa",
+    "cat": "Bebidas para llevar",
+    "name": "Iced latte",
+    "price": 6500,
+    "desc": "Café con leche fría y hielo.",
+    "photo": "",
+    "tag": "",
+    "opts": [
+      {
+        "key": "leche",
+        "label": "Elegí la leche",
+        "multi": false,
+        "options": [
+          {
+            "name": "Tradicional",
+            "price": 0
+          },
+          {
+            "name": "Sin lactosa",
+            "price": 600
+          },
+          {
+            "name": "Vegetal",
+            "price": 1100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-agua-sab",
+    "sec": "casa",
+    "cat": "Bebidas para llevar",
+    "name": "Agua saborizada",
+    "price": 4700,
+    "desc": "Bebida sin alcohol, variedad del día.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-cookie-llevar",
+    "sec": "casa",
+    "cat": "Dulces para llevar",
+    "name": "Cookie artesanal",
+    "price": 4300,
+    "desc": "Galleta con chocolate para acompañar.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  },
+  {
+    "id": "demo-brownie-llevar",
+    "sec": "casa",
+    "cat": "Dulces para llevar",
+    "name": "Mini brownie",
+    "price": 6100,
+    "desc": "Porción de brownie para llevar.",
+    "photo": "",
+    "tag": "",
+    "opts": []
+  }
+]

@@ -19,3 +19,11 @@ Para impresión automática al llegar pedidos se requiere backend compartido y u
 La demo guarda datos en el navegador. No conecta PC y celulares entre sí, ni protege todavía el panel de administración; no debe utilizarse con pedidos reales. Se necesita autenticación, autorización por local, sesiones de mesa comprobadas desde el servidor y sincronización de pedidos/impresión.
 
 Los logos de cada restaurante y las fotografías que se agreguen deberán almacenarse centralmente al conectar la base de datos. `branding/` contiene la marca Tu Menú.
+
+## Actualización V9 — Carta genérica
+- Catálogo de **35 productos ficticios** distribuidos en Restaurante, Cafetería y Para llevar. No son los platos ni los precios de Monti ni de otro negocio real.
+- Los textos de la portada son genéricos y editables desde Personalización junto al logo, la paleta y la plantilla.
+- Las categorías se generan desde los datos del catálogo. Referencia: `data/catalogo-ejemplo.json`.
+- **iPhone:** los campos de entrada, listas y áreas de texto tienen como mínimo 16px en pantallas móviles para evitar el zoom automático al escribir. Se mantiene el zoom manual.
+- La demo usa una clave nueva (`menu-demo-v9-tumenu-demo`) para no importar consumos, precios ni pedidos de antiguas pruebas.
+- La gestión y los pedidos son simulados hasta conectar un backend central y proteger el panel administrativo.
