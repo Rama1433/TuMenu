@@ -27,3 +27,13 @@ Los logos de cada restaurante y las fotografías que se agreguen deberán almace
 - **iPhone:** los campos de entrada, listas y áreas de texto tienen como mínimo 16px en pantallas móviles para evitar el zoom automático al escribir. Se mantiene el zoom manual.
 - La demo usa una clave nueva (`menu-demo-v9-tumenu-demo`) para no importar consumos, precios ni pedidos de antiguas pruebas.
 - La gestión y los pedidos son simulados hasta conectar un backend central y proteger el panel administrativo.
+
+
+## Actualización V10 — Instalación e identidad de app
+
+- `branding/apple-touch-icon.png`: PNG de **180×180** para iPhone/iPad (ya no muestra la inicial genérica si se agrega después de publicar).
+- `branding/icon-192.png` y `branding/icon-512.png`: íconos para Android/Chromium, declarados en `manifest.webmanifest`.
+- El ícono y nombre de la pestaña siguen la identidad del local en el navegador donde se cargó el logo.
+- La demo convierte el logo cargado en un ícono táctil PNG de vista local. **iOS puede ignorar los íconos personalizados expresados como URL de datos**; en ese caso se muestra el ícono general Tu Menú al instalar. Para asegurar el del local en cualquier dispositivo se requiere alojamiento público del logo, manifiesto por local y configuración central.
+- Si un acceso ya está instalado en iPhone, puede ser necesario borrarlo de Inicio y volver a usar *Compartir → Añadir a pantalla de inicio*; no se modifica de forma garantizada el ícono existente.
+- La subida de logos continúa siendo local a ese navegador hasta la futura integración con Supabase. No se modifican los productos, las mesas, las cuentas ni las comandas.

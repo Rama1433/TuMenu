@@ -2,10 +2,15 @@
 <html lang="es-AR">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<meta name="theme-color" content="#f6f0e9"/>
+<meta name="theme-color" content="#005253"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<meta name="apple-mobile-web-app-title" content="Tu Menú"/>
+<meta name="mobile-web-app-capable" content="yes"/>
 <title>Tu Menú · Cartas digitales</title>
 <link id="app-favicon" rel="icon" type="image/svg+xml" href="branding/favicon.svg"/>
-<link id="app-touch-icon" rel="apple-touch-icon" href="branding/apple-touch-icon.png"/>
+<link id="app-touch-icon" rel="apple-touch-icon" sizes="180x180" href="branding/apple-touch-icon.png"/>
+<link id="app-manifest" rel="manifest" href="manifest.webmanifest"/>
 <meta name="application-name" content="Tu Menú"/>
 <style>
 :root{--bg:#f8f5f0;--paper:#fffcf8;--ink:#33241d;--muted:#806f64;--line:#e9dfd5;--accent:#b84435;--accent-dark:#7b2f25;--soft:#f6e8dd;--alt:#f2e8dd;--green:#4d7961;--shadow:0 12px 40px rgba(76,47,32,.075)}
@@ -1228,24 +1233,28 @@ function syncBrandIcons(uploaded, palette){
  const revision=++brandIconRevision;
  const tab=document.getElementById('app-favicon'),touch=document.getElementById('app-touch-icon');
  const themeColor=document.querySelector('meta[name="theme-color"]');
- if(themeColor)themeColor.content=uploaded?(palette.soft||'#f6f0e9'):'#f6f0e9';
+ if(themeColor)themeColor.content=uploaded?(palette.soft||'#f6f0e9'):'#005253';
  if(!uploaded){
    if(tab){tab.type='image/svg+xml';tab.href='branding/favicon.svg'}
    if(touch)touch.href='branding/apple-touch-icon.png';
+   const appleName=document.querySelector('meta[name="apple-mobile-web-app-title"]');
+   if(appleName)appleName.content='Tu Menú';
    return;
  }
  const picture=new Image();
  picture.onload=()=>{
    if(revision!==brandIconRevision)return;
    try{
-     const c=document.createElement('canvas');c.width=192;c.height=192;
+     const c=document.createElement('canvas');c.width=180;c.height=180;
      const ctx=c.getContext('2d');ctx.fillStyle=palette.soft||'#ffffff';ctx.fillRect(0,0,192,192);
-     const scale=Math.min(156/picture.naturalWidth,156/picture.naturalHeight);
+     const scale=Math.min(144/picture.naturalWidth,144/picture.naturalHeight);
      const w=picture.naturalWidth*scale,h=picture.naturalHeight*scale;
      ctx.drawImage(picture,(192-w)/2,(192-h)/2,w,h);
      const png=c.toDataURL('image/png');
      if(tab){tab.type='image/png';tab.href=png}
      if(touch)touch.href=png;
+     const appleName=document.querySelector('meta[name="apple-mobile-web-app-title"]');
+     if(appleName)appleName.content=(cfg.name||"Tu Menú").slice(0,30);
    }catch(err){if(tab){tab.type='image/webp';tab.href=uploaded}}
  };
  picture.onerror=()=>{if(tab){tab.type='image/webp';tab.href=uploaded}};
